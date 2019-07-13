@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div>
+    <h3 id="name"> </h3>
+</div>
+<div id="date"> </div>
+<script>
+    function checkCookie(){
+        let cookies = document.cookie;
+        let check=(cookies!=="");
+        return check
+    }
+
+    if(checkCookie()){
+
+        function splitCookie(){
+            let cookies = document.cookie.split(";");
+            let parts;
+            for(let i=0; i<cookies.length; i++){
+               parts = cookies[i].split("=");
+            }
+            return parts;
+        }
+
+        let d=splitCookie();
+
+        function countDate(){
+            let resultMonth, resultDays,resultHours, resultMinutes, resultSeconds;
+            let dt = new Date();
+
+            let dU=d[1].split(".");
+            //lifehack меняем местами месяц с днем, из-за ввода пользователя
+            let buff=dU[0];
+            dU[0]=dU[1];
+            dU[1]=buff;
+
+
+            function monthDiff(d1, d2) {
+                let months;
+                months = (d2.getFullYear() - d1.getFullYear()) * 12;
+                months -= d1.getMonth() + 1;
+                months += d2.getMonth();
+                return months <= 0 ? 0 : months;
+            }
+
+            function dayInMonth(month,year) {
+                return new Date(year, month, 0).getDate();
+            }
+
+            function allDayMonth(mon){
+                let dt=new Date;
+                let allDay=0;
+                for (let i=0;i<mon;i++){
+                   allDay += dayInMonth(dt.getMonth(),dt.getFullYear());
+                   dt.setMonth(dt.getMonth()+1);
+                }
+                return allDay
+            }
+
+            if(dU[0]>dt.getMonth()+1){
+
+                dU[2]=dt.getFullYear();
+                dU=dU.join("/");
+                let dtUser=new Date(dU);
+                resultMonth=monthDiff(dt,dtUser);
+                let result=Math.floor((dtUser-dt)/1000/60/60/24);
+                resultDays=result - allDayMonth(resultMonth);
+                resultHours=Math.floor(((dtUser-dt)/1000/60/60/24-result)*24);
+                resultMinutes=Math.floor((((dtUser-dt)/1000/60/60/24-result)*24-resultHours)*60);
+                resultSeconds=Math.floor(((((dtUser-dt)/1000/60/60/24-result)*24-resultHours)*60-resultMinutes)*60);
+
+            }
+            else {
+                dU[2]=dt.getFullYear()+1;
+                dU=dU.join("/");
+                let dtUser=new Date(dU);
+                resultMonth=monthDiff(dt,dtUser);
+                let result=Math.floor((dtUser-dt)/1000/60/60/24);
+                resultDays=result - allDayMonth(resultMonth);
+                resultHours=Math.floor(((dtUser-dt)/1000/60/60/24-result)*24);
+                resultMinutes=Math.floor((((dtUser-dt)/1000/60/60/24-result)*24-resultHours)*60);
+                resultSeconds=Math.floor(((((dtUser-dt)/1000/60/60/24-result)*24-resultHours)*60-resultMinutes)*60);
+            }
+
+            document.getElementById("date").innerText="До Вашего дня рождения: " + resultMonth +" месяцев " + resultDays +
+                    " дней " +resultHours + ":" + resultMinutes + ":" + resultSeconds;
+
+           }
+
+        //countDate();
+        document.getElementById("name").innerText="Привет "+ d[0];
+        let time=setInterval(countDate,1000)
+
+    }
+    else {
+        let getName = prompt("Ваше имя?", "");
+        let getBth = prompt("Ваша дата рождения?", "01.01.1990");
+        let regexp = /\d\d\.\d\d\.\d\d\d\d/;
+
+        while (getBth.search(regexp) === -1) {
+            alert("Введите дату согласно шаблона");
+            getBth = prompt("Ваша дата рождения?", "01.01.1990");
+        }
+
+        // из документации
+        function setCookie(name, value, options) {
+            options = options || {};
+
+            let expires = options.expires;
+
+            if (typeof expires == "number" && expires) {
+                let d = new Date();
+                d.setTime(d.getTime() + expires * 1000);
+                expires = options.expires = d;
+            }
+            if (expires && expires.toUTCString) {
+                options.expires = expires.toUTCString();
+            }
+
+            value = encodeURIComponent(value);
+
+            let updatedCookie = name + "=" + value;
+
+            for (let propName in options) {
+                updatedCookie += "; " + propName;
+                let propValue = options[propName];
+                if (propValue !== true) {
+                    updatedCookie += "=" + propValue;
+                }
+            }
+
+            document.cookie = updatedCookie;
+        }
+
+        setCookie(getName, getBth);
+        //перезагрузка страницы полсе установки cookies
+        window.location.reload();
+    }
+
+</script>
+</body>
+</html>

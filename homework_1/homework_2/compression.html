@@ -1,0 +1,49 @@
+<!Doctype HTML>
+<html>
+<head>
+    <title> 1</title>
+    <meta charset="utf-8">
+</head>
+<body>
+<script>
+    function compress(str){
+        let letters={};
+        let result="";
+        for (let i=0; i<str.length; i++){
+            if (str[i] in letters){
+                letters[str[i]]+=1;
+            }
+            else {
+                letters[str[i]]=1;
+            }
+        }
+        for (i in letters){
+            result+=i+letters[i];
+        }
+        return (result);
+    }
+
+    function uncompress(str){
+        let result="";
+        let numbers=str.split(/[a-z]/g);
+        let letters=str.split(/[0-9]/g);
+        letters=letters.filter(function(v){return v!==""});
+        numbers=numbers.filter(function(v){return v!==""});
+
+        for (let i=0; i<letters.length; i++){
+            result+=letters[i].repeat(numbers[i]);
+        }
+        return (result)
+    }
+
+
+    let str='aabbcccc';
+    let str2='a10b3c12';
+
+    console.log(compress(str));
+    console.log(uncompress(str2));
+
+
+</script>
+</body>
+</html>

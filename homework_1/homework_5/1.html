@@ -1,0 +1,49 @@
+<!Doctype HTML>
+<html>
+<head>
+    <title> 1</title>
+    <meta charset="utf-8">
+</head>
+<body>
+<script>
+    function getCounter(num){
+        var self=this;
+        self.sum=num;
+        getCounter.prototype.log=function(){
+            console.log(self.sum)
+        }
+       getCounter.prototype.count=function(num) {
+            self.sum += num;
+        }
+        getCounter.prototype.reset=function() {
+            self.sum = 0;
+        }
+
+           /* function count(num){
+                getCounter.call(this);
+            }
+            count.prototype = Object.create(getCounter.prototype);
+            count.prototype.constructor = count;
+
+            function reset(){
+                getCounter.call(this);
+            }
+            reset.prototype = Object.create(getCounter.prototype);
+            reset.prototype.constructor = count;
+*/
+
+    };
+
+    var counter=new getCounter(5);
+    counter.log()
+    .count(4)
+    .log()
+    .count(3)
+    .log()
+    .reset()
+    .log()
+    .count(3)
+    .log()
+</script>
+</body>
+</html>

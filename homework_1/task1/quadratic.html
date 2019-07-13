@@ -1,0 +1,39 @@
+<!Doctype HTML>
+<html>
+<head>
+    <title> 1</title>
+<meta charset="utf-8">
+</head>
+<body>
+<script>
+    function quadraticEquation(a,b,c){
+        var x1,x2;
+        var D=b*b-4*a*c;
+        if(D>0){
+            x1=(-b+Math.sqrt(D))/2/a;
+            x2=(-b-Math.sqrt(D))/2/a;
+            console.log('уравнение '+a+'x^2'+(b)+'x'+c+"=0"+' имеет корни  x1 = '+x1+ ' x2 = '+x2);
+            return [x1, x2];
+        }
+        else if(D==0){
+            x1=(-b/(2*a));
+            x2=(-b/(2*a));
+            console.log('уравнение '+a+'x^2'+(b)+'x'+c+"=0"+' имеет один корень  x = '+x1);
+            return [x1, x2];
+        }
+        else{
+            console.log('уравнение '+a+'x^2'+(b)+'x'+c+"=0 "+' не имеет вещественных корней');
+            return;
+        }
+    }
+    var a=prompt("Коэф.а");
+    var b=prompt("Коэф.b");
+    var c=prompt("Коэф.с");
+    b>=0?b="+"+b:b;
+    c>=0?c="+"+c:c;
+    quadraticEquation(a,b,c);
+
+
+</script>
+</body>
+</html>

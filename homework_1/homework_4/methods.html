@@ -1,0 +1,21 @@
+<!Doctype HTML>
+<html>
+<head>
+    <title> 1</title>
+    <meta charset="utf-8">
+</head>
+<body>
+<script>
+    var numbers = [2, 3, 5, 7, 11, 13, 17, 19];
+    var result=[];
+    function currentSums(sum,current,i,numbers) {
+
+        result.push(sum+current);
+        return sum+current
+    }
+    numbers.reduce(currentSums,0);
+    console.log(result)
+
+</script>
+</body>
+</html>

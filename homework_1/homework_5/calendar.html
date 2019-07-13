@@ -1,0 +1,88 @@
+<!Doctype HTML>
+<html>
+<head>
+    <title> 1</title>
+    <meta charset="utf-8">
+    <style>
+        #col1 {
+            background: #E6E6E6; /* Цвет фона первой колонки */
+            text-align: right;
+            font-weight: bold;
+        }
+        table {
+            border-spacing: 0px;
+            border: 1px solid black;
+            width: 400px;
+            height: 250px;
+        }
+        td{
+            border: 1px solid black;
+            padding: 3px;
+            text-align: center;
+        }
+
+        th {
+            border: 1px solid black;
+            font-weight: bold;
+            background-color: #E6E6E6;
+        }
+    </style>
+</head>
+<body>
+<div id="calendar"></div>
+<script>
+    let year = prompt('Введите год', '');
+    let month = prompt('Введите месяц', '') - 1;
+    let monthNames = ["Январь", "Февраль", "Март", "Апрель", "Май", "Июнь",
+        "Июль", "Август", "Сентябрь", "Октябрь", "Ноябрь", "Декабрь"];
+
+    function getCalendar(id,year,mon) {
+        let elem = document.getElementById(id);
+        let table = '<table><tr><td colspan="7" id="col1">'+ monthNames[month]+ ' ' + year  + ' года' +'</td></tr><tr><th>пн</th><th>вт</th><th>ср</th><th>чт</th>' +
+            '<th>пт</th><th>сб</th><th>вс</th></tr><tr>';
+        let d = new Date(year, mon);
+
+        //записывает пустые ячейки первой строки
+        for (let i = 0; i < getDay(d); i++) {
+            table += '<td></td>';
+        }
+
+        //заполнение таблицы числами
+        while (d.getMonth() === mon) {
+            table += '<td>' + d.getDate() + '</td>';
+
+            if (getDay(d) === 6) {
+                table += '</tr><tr>';
+            }
+
+            d.setDate(d.getDate() + 1); //переходим на следующий день
+        }
+
+        //если первое число следующего месяца не пн., заполняем пустыми ячейками
+        if (getDay(d) !== 0) {
+            for (let i = getDay(d); i < 7; i++) {
+                table += '<td></td>';
+            }
+            table += '</tr></table>';
+        }
+        else{
+            //удаляем последний <tr>
+            table = table.slice(0,-4) + '</table>'
+        }
+
+        //вставка таблицы в div
+        elem.innerHTML = table;
+    }
+
+    //функция сдвиг дней недели
+    function getDay(date) {
+        let day = date.getDay(); //день недели
+        if (day === 0) day = 7;
+        return day - 1;
+    }
+
+    getCalendar("calendar", year, month)
+
+</script>
+</body>
+</html>

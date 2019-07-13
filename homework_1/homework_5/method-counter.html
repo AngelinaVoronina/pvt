@@ -1,0 +1,36 @@
+<!Doctype HTML>
+<html>
+<head>
+    <title> 1</title>
+    <meta charset="utf-8">
+</head>
+<body>
+<script>
+    function getCounter(num){
+        var self=this;
+
+        self.sum=num;
+        self.log=function(){
+            console.log(self.sum)
+        }
+        self.count=function(num){
+            self.sum+=num;
+        }
+        self.reset=function(){
+            self.sum=0;
+        }
+
+    };
+    var counter=new getCounter(5);
+    counter.log();
+    counter.count(4);
+    counter.log();
+    counter.count(3);
+    counter.log();
+    counter.reset();
+    counter.log();
+    counter.count(3);
+    counter.log();
+</script>
+</body>
+</html>

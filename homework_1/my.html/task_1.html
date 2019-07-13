@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+
+    let str="Каждый охотник желает";
+
+    function reverse(str) {
+        let arr=[];
+
+        for (let i=0; i<str.length;i++){
+            arr.unshift(str[i]);
+
+        }
+        str=arr.join("");
+        return str
+
+    }
+
+    console.log(reverse(str));
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!Doctype HTML>
+<html>
+<head>
+    <title> 1</title>
+    <meta charset="utf-8">
+</head>
+<body>
+<svg xmlns="http://www.w3.org/2000/svg"  onload="init(evt)">
+
+    <circle fill=yellow cx="100" cy="100" r="50"> </circle>
+
+    <line id="hours" x1="0" y1="0" x2="0" y2="8" stroke-linecap="round"
+          stroke-width="2" stroke="#66757F" transform="translate(100,100) rotate(180 0 0) " />
+
+    <line id="minutes" x1="0" y1="0" x2="0" y2="12" stroke-linecap="round"
+          stroke-width="2" stroke="#66757F" transform="translate(100,100) rotate(258 0 0) " />
+
+    <line id="seconds" x1="0" y1="0" x2="0" y2="12" stroke-linecap="round"
+          stroke-width="1" stroke="#fff" transform="translate(100,100) rotate(310 0 0) " />
+
+    <script type="text/ecmascript"><![CDATA[
+    function init(evt) {
+        let
+            svgHours   = document.querySelector("#hours"),
+            svgMinutes = document.querySelector("#minutes"),
+            svgSeconds = document.querySelector("#seconds");
+
+        setInterval(function(){
+            let  dt = new Date(),
+                hours = dt.getHours(),
+                minutes = dt.getMinutes(),
+                seconds = dt.getSeconds(),
+                degSeconds = 180 + 360/60 * seconds,
+                degMinutes = 180 + 360/60 * minutes,
+                degHours =   180 + 360/12 * ( hours % 12 ) + degMinutes/60;
+
+
+            svgHours.setAttribute('transform',`translate(100,100) rotate(${degHours} 0 0)`);
+            svgMinutes.setAttribute('transform',`translate(100,100) rotate(${degMinutes} 0 0)`);
+            svgSeconds.setAttribute('transform',`translate(100,100)  rotate(${degSeconds} 0 0)`);
+            console.clear();
+            console.log(dt.toLocaleTimeString());
+        }, 1000);
+
+    }
+    ]]>
+
+</script>
+</svg>
+</body>
+</html>
+

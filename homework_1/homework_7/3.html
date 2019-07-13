@@ -1,0 +1,28 @@
+<!-- -->
+<!Doctype HTML>
+<html>
+<head>
+    <title> 1 </title>
+    <meta charset="utf-8">
+</head>
+<body>
+<p> 5 </p>
+<p> 4 </p>
+<p> 9 </p>
+<p> 7 </p>
+<script>
+    let quadr=function (){
+        let n=parseFloat(this.textContent);
+        this.textContent=Math.pow(n,2)
+        this.removeEventListener('click', quadr, false);
+    }
+
+    let elem=document.getElementsByTagName("p");
+    for (let i=0;i<elem.length;i++) {
+        elem[i].addEventListener('click', quadr, false);
+
+    }
+
+</script>
+</body>
+</html>

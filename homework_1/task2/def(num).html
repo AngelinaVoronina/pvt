@@ -1,0 +1,24 @@
+<!Doctype HTML>
+<html>
+<head>
+    <title> 1</title>
+    <meta charset="utf-8">
+</head>
+<body>
+<script>
+    function def(num){
+        for (var i=0; i<num.length;i++){
+            if (num[i]%2==0 && num[i-1]%2==0){
+                document.write("-" + num[i]);
+            }
+            else{
+                document.write(num[i]);
+            }
+        }
+    }
+    var a=prompt("Введите число","");
+    def(a);
+
+</script>
+</body>
+</html>

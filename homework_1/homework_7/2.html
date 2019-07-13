@@ -1,0 +1,28 @@
+<!-- -->
+<!Doctype HTML>
+<html>
+<head>
+    <title> 1 </title>
+    <meta charset="utf-8">
+</head>
+<body>
+<input type="text" value="Имя"> <br>
+<input type="text" value="Фамилия"> <br>
+<input type="text" value="Отчество"> <br>
+<script>
+
+    let show=function () {
+        console.log(this.getAttribute("value"));
+        this.removeEventListener('click', show, false);
+
+    }
+
+    let elem=document.getElementsByTagName("input");
+    for (let i=0;i<elem.length;i++) {
+        elem[i].addEventListener('click', show, false);
+
+    }
+
+</script>
+</body>
+</html>

@@ -1,0 +1,13 @@
+function seven(f=""){
+return f.length>=2? eval("7" + f): ("7" + f)
+}
+
+function three(f=""){
+return f.length>=2? eval("3" + f):("3" + f)
+}
+
+function times(f=""){
+return "*" + f;
+}
+
+console.log(three(times(seven())))

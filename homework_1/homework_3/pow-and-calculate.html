@@ -1,0 +1,51 @@
+<!Doctype HTML>
+<html>
+<head>
+    <title> 1</title>
+    <meta charset="utf-8">
+</head>
+<body>
+<script>
+
+    var pow = function f(x){
+        return function(y){
+            if (y !== 1) {
+                return x * pow(x)(y - 1);
+            } else {
+                return x;
+            }
+        };
+    }
+
+    var calculate = function f(a){
+        return function(symbol){
+            return function (b){
+                switch (symbol) {
+                    case "+":
+                        return a+b;
+                    case "-":
+                        return a-b;
+                    case "*":
+                        return a*b;
+                    case "/":
+                        return a/b;
+                    default:
+                        console.log("Ошибка!")
+
+                }
+
+            }
+        };
+    }
+    var c=-15;
+    var symbol="+";
+    var d=3;
+    console.log("Результат "+ c+symbol+d+' = ' +calculate(c)(symbol)(d));
+    var a=-2;
+    var b=3;
+    console.log("Результат "+ a+"^"+b+' = ' + pow(a)(b))
+
+
+</script>
+</body>
+</html>

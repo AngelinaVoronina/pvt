@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        #main {
+            height: 50%;
+            width: 50%;
+
+        }
+        .parentPosition {
+            position: relative;
+            border-radius:50% ;
+            margin-left: 0px;
+
+        }
+        .circle {
+            width: 50px;
+            height: 50px;
+            position: absolute;
+            border-radius: 50%;
+            font-size:35px;
+            text-align: center;
+        }
+
+        #seconds {
+            background: #000;
+            height:40%;
+            left: 49.5%;
+            position: absolute;
+            margin: auto;
+            top: 45%;
+            transform-origin: 90% 15%;
+            width: 0.7%;
+
+        }
+        #minutes {
+            background: #000;
+            height:36%;
+            left: 49.5%;
+            position: absolute;
+            margin: auto;
+            top: 45%;
+            transform-origin: 90% 15%;
+            width: 1.2%;
+            border-radius: 5px;
+
+        }
+        #hours {
+            background: #000;
+            height:29%;
+            left: 49.5%;
+            position: absolute;
+            margin: auto;
+            top: 47%;
+            transform-origin: 50% 15%;
+            width: 2%;
+            border-radius: 5px;
+        }
+        #red-circle {
+            width: 400px;
+            height: 400px;
+            background-color: yellow;
+            left: 50%;
+            top: 50%;
+        }
+    </style>
+
+</head>
+<body>
+<div id="main">
+    <div id="red-circle" class="parentPosition">
+        <div id="seconds"></div>
+        <div id="minutes"></div>
+        <div id="hours"></div>
+    </div>
+</div>
+
+<script>
+
+    //получаем наш красный круг по id
+    let red = document.getElementById("red-circle");
+
+    //угол первого часа
+    let corn=30;
+
+    //функция установки позиций зеленых кругов
+    function setPosition(corn,n) {
+        //n - номер круга по порядку, c - наш текущий создаваемый круг
+        var c=document.getElementById(String(n));
+        var radius = 170;
+        var angle = corn/180*3.14;
+
+        var t = red.getBoundingClientRect();
+
+        var redCenterX = (t.right-t.left)/2;
+        var redCenterY = (t.bottom-t.top)/2;
+
+        var greenCenterX=redCenterX+radius*Math.sin(angle);
+        var greenCenterY=redCenterY-radius*Math.cos(angle);
+
+        c.style.left=Math.round(greenCenterX-c.offsetWidth/2)+"px";
+        c.style.top=Math.round(greenCenterY-c.offsetHeight/2)+"px";
+    }
+
+    //функция отрисовки зеленого круга
+    function createCircle(n){
+        // n - номер круга по порядку
+        let d=document.createElement("div");
+        d.className="circle";
+        d.id=String(n);
+        d.style.backgroundColor="green";
+        d.textContent=String(n+1);
+        let par=document.getElementsByClassName("parentPosition")[0];
+        par.appendChild(d);
+
+    }
+
+    //функция выполняется после загрузки окна, устанавливает углы стрелок, устанавливает текущую дату
+    window.onload=function init() {
+
+        let Hours = document.querySelector("#hours");
+        let Minutes = document.querySelector("#minutes");
+        let Seconds = document.querySelector("#seconds");
+
+        setInterval(function () {
+            let dt = new Date(),
+                hours = dt.getHours(),
+                minutes = dt.getMinutes(),
+                seconds = dt.getSeconds(),
+                degSeconds = 180 + 360 / 60 * seconds,
+                degMinutes = 180 + 360 / 60 * minutes,
+                degHours = 180 + 360 / 12 * (hours % 12) + degMinutes / 60;
+
+
+            Hours.style.transform='rotate('+degHours+'deg)';
+            Minutes.style.transform='rotate('+degMinutes+'deg)';
+            Seconds.style.transform='rotate('+degSeconds+'deg)';
+           // console.clear();
+           // console.log(dt.toLocaleTimeString());
+
+        }, 1000);
+
+    };
+
+    //цикл отрисовки зеленых кругов, а так же устанавливает их позиции
+    for (let i = 0; i < 12; i++) {
+        createCircle(i);
+        setPosition(corn, i);
+        corn += 30;
+    }
+
+</script>
+</body>
+</html>

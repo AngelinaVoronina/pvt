@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #start{
+              background-color: grey;
+              width: 120px;
+              height: 35px;
+              border-radius: 5%;
+              color:white;
+          }
+        .header{
+            display: inline-block;
+            font-size: 30px;
+        }
+    </style>
+</head>
+<body>
+<div id="count">
+    <div class="header">
+        <button id="start">Старт!</button>
+    </div>
+    <div class="header" id="numL" style="width: 15%" align='right'>0</div>
+    <div class="header" style="width: 1%" align="center">:</div>
+    <div class="header" id="numR" style="width: 15%">0</div>
+</div>
+<br>
+<div>
+    <svg xmlns="http://www.w3.org/2000/svg" width=1050 height=580>
+        <rect id="areaP"  x="0" y="0" width="1000" height="580" fill="yellow"></rect>
+    </svg>
+</div>
+<script>
+    // получаем поле по id
+    let area=document.getElementById("areaP");
+    let areaX=parseInt(area.getAttribute('x'));
+    let areaY=parseInt(area.getAttribute('y'));
+    let areaW=parseInt(area.getAttribute('width'));
+    let areaH=parseInt(area.getAttribute('height'));
+
+    // рисуем ракетки и мяч
+    function draw() {
+        let w=25;
+        let h=150;
+        let r=30;
+
+        let left=document.createElementNS("http://www.w3.org/2000/svg" ,"rect");
+        left.setAttributeNS(null,'x',String(areaX));
+        left.setAttributeNS(null,'y',String(areaY));
+        left.setAttributeNS(null,'width',String(w));
+        left.setAttributeNS(null,'height',String(h));
+        left.setAttributeNS(null,'style','fill: green;');
+        left.setAttributeNS(null,'id','left');
+        let par=document.getElementsByTagName("svg")[0];
+        par.appendChild(left);
+
+        let right=document.createElementNS("http://www.w3.org/2000/svg" ,"rect");
+        right.setAttributeNS(null,'x',String(areaX+areaW-w));
+        right.setAttributeNS(null,'y',String(areaY));
+        right.setAttributeNS(null,'width',String(w));
+        right.setAttributeNS(null,'height',String(h));
+        right.setAttributeNS(null,'style','fill: red;');
+        right.setAttributeNS(null,'id','right');
+        par.appendChild(right);
+
+        let ball=document.createElementNS("http://www.w3.org/2000/svg" ,"circle");
+        ball.setAttributeNS(null,'cx',String(areaX+areaW/2));
+        ball.setAttributeNS(null,'cy',String(areaY+areaH/2));
+        ball.setAttributeNS(null,'r',String(r));
+        ball.setAttributeNS(null,'style','fill: blue;');
+        ball.setAttributeNS(null,'id','ball');
+        par.appendChild(ball);
+    }
+
+    draw();
+
+    function move(e) {
+        if (map[38] === "keydown") {
+            let right = document.getElementById("right");
+            let style = window.getComputedStyle(right);
+            let y = style.getPropertyValue('y');
+            if (parseInt(y) > 0) {
+                right.style.y = parseInt(y) - 10 + "px";
+            } else {
+                right.style.y = parseInt(y) + "px"
+            }
+        }
+
+        if (map[40] === "keydown") {
+            let right = document.getElementById("right");
+            let style = window.getComputedStyle(right);
+            let y = style.getPropertyValue('y');
+            let height = style.getPropertyValue('height');
+            let area = document.getElementById("areaP");
+            let styleF = window.getComputedStyle(area);
+            let areaH = styleF.getPropertyValue("height");
+            if (parseInt(y) +parseInt(height)  < parseInt(areaH)) {
+                console.log(1);
+                right.style.y = parseInt(y) + 10 + "px";
+            } else {
+                right.style.y = parseInt(y) + "px"
+            }
+        }
+
+        if (map[16] === "keydown") {
+            let left = document.getElementById("left");
+            let style = window.getComputedStyle(left);
+            let y = style.getPropertyValue('y');
+            if (parseInt(y) > 0) {
+                left.style.y = parseInt(y) - 10 + "px";
+            } else {
+                left.style.y = parseInt(y) + "px"
+            }
+        }
+        if (map[17] === "keydown") {
+            let left = document.getElementById("left");
+            let style = window.getComputedStyle(left);
+            let y = style.getPropertyValue('y');
+            let height = style.getPropertyValue('height');
+            let area = document.getElementById("areaP");
+            let styleF = window.getComputedStyle(area);
+            let areaH = styleF.getPropertyValue("height");
+            if (parseInt(y) + parseInt(height) < parseInt(areaH)) {
+                left.style.y = parseInt(y) + 10 + "px";
+            } else {
+                left.style.y = parseInt(y) + "px"
+            }
+        }
+    }
+
+    let circle=document.getElementById("ball");
+    let ballH={
+        posX : parseInt(circle.getAttribute('cx')),
+        posY : parseInt(circle.getAttribute('cy')),
+        speedX : 10,
+        speedY : 7,
+        width : parseInt(circle.getAttribute('r')),
+        height: parseInt(circle.getAttribute('r')),
+
+        update : function() {
+            let ballElem=document.getElementById('ball');
+            ballElem.style.cx=this.posX+"px";
+            ballElem.style.cy=this.posY+"px";
+        }
+    };
+
+    let areaObj={
+        width : parseInt(area.getAttribute('width')),
+        height : parseInt(area.getAttribute('height')),
+    };
+
+    let a;
+
+    function start() {
+        ballH.posX = parseInt(circle.getAttribute('cx'));
+        ballH.posY = parseInt(circle.getAttribute('cy'));
+        // плавное движение - от 25 кадр/сек
+        a=setInterval(tick,40);
+    }
+    function stop() {
+        clearInterval(a)
+    }
+
+    function changeCounter(side){
+        if (side==="right"){
+            let r=document.getElementById("numL");
+            r.innerText=parseInt(r.textContent)+1;
+        }
+        if (side==="left"){
+            let r=document.getElementById("numR");
+            r.innerText=parseInt(r.textContent)+1;
+        }
+    }
+
+    function tick() {
+        let right = document.getElementById("right");
+        let style = window.getComputedStyle(right);
+        let y = parseInt(style.getPropertyValue('y'));
+        let height = parseInt(style.getPropertyValue('height'));
+        let left = document.getElementById("left");
+        let styleL = window.getComputedStyle(left);
+        let yL = parseInt(styleL.getPropertyValue('y'));
+        let heightL = parseInt(style.getPropertyValue('height'));
+
+
+        ballH.posX+=ballH.speedX;
+        // вылетел ли мяч правее стены?
+        console.log(y + "top");
+        console.log(ballH.posY+ballH.width);
+        if (ballH.posX+ballH.width>areaObj.width-25 && ballH.posY-ballH.width<y+height && ballH.posY+ballH.width>y) {
+            console.log("True");
+            ballH.speedX=-ballH.speedX;
+            ballH.posX=areaObj.width-ballH.width-25;
+        }
+        else if(ballH.posX+ballH.width>=areaObj.width){
+            changeCounter("right");
+            stop();
+
+        }
+
+        // вылетел ли мяч левее стены?
+        if ( ballH.posX-ballH.width<25 && ballH.posY-ballH.width<yL+heightL && ballH.posY+ballH.width>yL) {
+            ballH.speedX = -ballH.speedX;
+            ballH.posX = 25+ballH.width;
+        }
+        else if(ballH.posX-ballH.width<=0){
+            changeCounter("left");
+            stop();
+        }
+
+
+        ballH.posY+=ballH.speedY;
+        // вылетел ли мяч ниже пола?
+        if ( ballH.posY+ballH.height>areaObj.height ) {
+            ballH.speedY=-ballH.speedY;
+            ballH.posY=areaObj.height-ballH.height;
+        }
+        // вылетел ли мяч выше потолка?
+        if ( ballH.posY-ballH.height<0 ) {
+            ballH.speedY=-ballH.speedY;
+            ballH.posY=ballH.height;
+        }
+
+        ballH.update();
+    }
+
+   // ballH.update();
+
+
+    let map={};
+
+    window.addEventListener("keydown", function (event) {
+        map[event.keyCode]=event.type;
+        move(event)
+    },false);
+    window.addEventListener("keyup", function (event) {
+        map[event.keyCode]=event.type;
+        move(event)
+    },false);
+
+
+    let s=document.getElementById("start");
+    s.addEventListener('click', function () {
+        start()
+    },false);
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!Doctype HTML>
+<html>
+<head>
+    <title> 1</title>
+    <meta charset="utf-8">
+</head>
+<body>
+<script>
+    var arr = [1,2,4,5,6,7,8,9,10];
+    var buffer=[];
+    function changeArray(arr){
+        var s=0;
+        var l=arr.length;
+        s=Math.floor(l/2);
+        buffer=arr.splice(0,s);
+        if(l%2!=0){
+            arr.push(arr.splice(0,1)[0]);
+        }
+        console.log(arr.concat(buffer));
+    }
+    changeArray(arr);
+
+</script>
+</body>
+</html>

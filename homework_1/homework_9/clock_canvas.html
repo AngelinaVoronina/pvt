@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<canvas id="canvas1" width="1000" height="1000" onload="timer">
+</canvas>
+<script>
+    let context=document.getElementById("canvas1");
+    let ctx=context.getContext("2d");
+
+    let radius=30;
+    let distance=205;
+    let radiusMain=250;
+
+    //отрисовка желтого круга
+    function drawMain(){
+        ctx.fillStyle="yellow";
+        ctx.lineWidth=1;
+        ctx.beginPath();
+        ctx.arc(ctx.canvas.width/2, ctx.canvas.height/2,radiusMain, 0,2*Math.PI, false);
+        ctx.fill();
+    }
+
+    // отрисовка зеленых кругов и текста в них
+    function draw(angle,n) {
+        ctx.fillStyle="green";
+        ctx.lineWidth=1;
+        ctx.beginPath();
+        ctx.arc(ctx.canvas.width/2 + distance*Math.sin(angle/180*3.14), ctx.canvas.height/2-distance*Math.cos(angle/180*3.14), radius, 0 ,2*Math.PI, false);
+        ctx.fill();
+        ctx.fillStyle="black";
+        ctx.font="28px Arial";
+        ctx.fillText(String(n),ctx.canvas.width/2-9 + distance*Math.sin(angle/180*3.14), ctx.canvas.height/2+5-distance*Math.cos(angle/180*3.14));
+    }
+
+    function secondsLine(degSeconds){
+        ctx.strokeStyle="black";
+        ctx.lineWidth="2";
+        ctx.beginPath();
+        ctx.moveTo(ctx.canvas.width/2, ctx.canvas.height/2);
+        ctx.lineTo(ctx.canvas.width/2 + distance*Math.sin(degSeconds/180*3.14), ctx.canvas.height/2 - distance*Math.cos(degSeconds/180*3.14));
+        ctx.stroke();
+
+    }
+
+    function minutesLine(degMinutes){
+        ctx.strokeStyle="black";
+        ctx.lineWidth="3";
+        ctx.beginPath();
+        ctx.moveTo(ctx.canvas.width/2, ctx.canvas.height/2);
+        ctx.lineTo(ctx.canvas.width/2 + (distance-40)*Math.sin(degMinutes/180*3.14), ctx.canvas.height/2 - (distance-40)*Math.cos(degMinutes/180*3.14));
+        ctx.stroke();
+
+    }
+
+    function hoursLine(degHours){
+        ctx.strokeStyle="black";
+        ctx.lineWidth="5";
+        ctx.beginPath();
+        ctx.moveTo(ctx.canvas.width/2, ctx.canvas.height/2);
+        ctx.lineTo(ctx.canvas.width/2 + (distance-65)*Math.sin(degHours/180*3.14), ctx.canvas.height/2 - (distance-65)*Math.cos(degHours/180*3.14));
+        ctx.stroke();
+
+    }
+
+    function timerEl(time) {
+        ctx.beginPath();
+        ctx.fillStyle="black";
+        ctx.font="bold 36px Arial";
+        ctx.fillText(String(time),ctx.canvas.width/2.3, ctx.canvas.height/2.5);
+        ctx.closePath();
+    }
+
+    // Функция получает текущее время, устанавливает стрелки на нужный угол, выводит электронные часы
+    function clock() {
+        let angle=30;
+        ctx.clearRect(0, 0, ctx.canvas.width, ctx.canvas.height);
+        let dt = new Date(),
+            hours = dt.getHours(),
+            minutes = dt.getMinutes(),
+            seconds = dt.getSeconds(),
+            degSeconds = 180 + 360 / 60 * seconds,
+            degMinutes = 180 + 360 / 60 * minutes,
+            degHours = 180 + 360 / 12 * (hours % 12) + degMinutes / 60;
+        drawMain();
+
+        for (let i = 0; i < 12; i++) {
+            draw(angle, i + 1);
+            angle += 30;
+        }
+
+        secondsLine(degSeconds);
+        minutesLine(degMinutes);
+        hoursLine(degHours);
+        timerEl(dt.toLocaleTimeString('en-US', {hour12: false}));
+
+    }
+
+    let timer=setInterval(clock,1000);
+
+</script>
+</body>
+</html>

@@ -1,0 +1,637 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="efa3316e-51d0-41bc-acc3-0a60092a9e19" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/11062019.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/homework_1/.idea/homework_1.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/homework_1/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/homework_1/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/homework_1/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/homework_1/example_ball.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/homework_1/homework_10/tennis-dom.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/homework_1/homework_11/1.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/homework_1/homework_11/tennis_canvas.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/homework_1/homework_11/tennis_svg.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/homework_1/homework_12/cookie_birthday.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/homework_1/homework_2/calcWithFunc.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/homework_1/homework_2/compression.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/homework_1/homework_2/countVowels.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/homework_1/homework_3/buttons-counter.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/homework_1/homework_3/pow-and-calculate.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/homework_1/homework_4/coctails.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/homework_1/homework_4/methods.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/homework_1/homework_4/methods_Array.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/homework_1/homework_4/methods_changeArray.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/homework_1/homework_4/коктейль.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/homework_1/homework_5/1.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/homework_1/homework_5/calendar.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/homework_1/homework_5/method-counter.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/homework_1/homework_6/calendar_2.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/homework_1/homework_6/editable_list.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/homework_1/homework_7/1.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/homework_1/homework_7/2.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/homework_1/homework_7/3.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/homework_1/homework_7/4.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/homework_1/homework_7/calendar.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/homework_1/homework_8/1.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/homework_1/homework_8/clock.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/homework_1/homework_8/div_clock.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/homework_1/homework_8/example.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/homework_1/homework_9/clock_canvas.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/homework_1/my.html/1.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/homework_1/my.html/canvas.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/homework_1/my.html/learn.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/homework_1/my.html/mvc.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/homework_1/my.html/site.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/homework_1/my.html/task_1.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/homework_1/site/css_site.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/homework_1/site/images/1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/homework_1/site/images/2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/homework_1/site/images/3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/homework_1/site/images/intro.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/homework_1/site/images/services/creativity.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/homework_1/site/images/services/css-html.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/homework_1/site/images/services/digital.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/homework_1/site/images/services/photography.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/homework_1/site/images/services/seo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/homework_1/site/images/services/webdesign.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/homework_1/site/site_video.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/homework_1/task1/quadratic.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/homework_1/task2/def(num).html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/homework_1/task2/fizzBuzz.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/homework_1/task3/getName.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/homework_2/.idea/homework_2.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/homework_2/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/homework_2/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/homework_2/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project/1.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project/game.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project/images/1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project/images/11.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project/images/22.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project/images/a.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project/images/balls/blue.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project/images/balls/green.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project/images/balls/purple.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project/images/balls/red.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project/images/balls/yellow.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project/images/balls/синий.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project/images/green.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project/images/intro.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project/images/red.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project/images/yellow.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project/images/кристалл.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project/start.html" afterDir="false" />
+    </list>
+    <ignored path="$PROJECT_DIR$/.tmp/" />
+    <ignored path="$PROJECT_DIR$/temp/" />
+    <ignored path="$PROJECT_DIR$/tmp/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/project/game.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="595">
+              <caret line="35" column="26" selection-start-line="35" selection-start-column="26" selection-end-line="35" selection-end-column="26" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/homework_1/homework_4/coctails.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1292">
+              <caret line="76" column="14" selection-start-line="76" selection-start-column="14" selection-end-line="76" selection-end-column="14" />
+              <folding>
+                <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/homework_1/my.html/1.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="291">
+              <caret line="36" column="26" selection-start-line="36" selection-start-column="26" selection-end-line="36" selection-end-column="26" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+        <option value="CSS File" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>addListenerForOne</find>
+    </findStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/homework_1/homework_9/clock_canvas.html" />
+        <option value="$PROJECT_DIR$/homework_1/homework_11/1.html" />
+        <option value="$PROJECT_DIR$/homework_1/my.html/mvc.html" />
+        <option value="$PROJECT_DIR$/homework_1/homework_11/tennis_canvas.html" />
+        <option value="$PROJECT_DIR$/homework_1/homework_12/cookie_birthday.html" />
+        <option value="$PROJECT_DIR$/project/1.html" />
+        <option value="$PROJECT_DIR$/homework_1/homework_8/clock.html" />
+        <option value="$PROJECT_DIR$/homework_1/homework_3/pow-and-calculate.html" />
+        <option value="$PROJECT_DIR$/homework_1/my.html/site.html" />
+        <option value="$PROJECT_DIR$/homework_1/homework_4/coct.html" />
+        <option value="$PROJECT_DIR$/homework_1/homework_4/coctails.html" />
+        <option value="$PROJECT_DIR$/homework_1/homework_6/1.html" />
+        <option value="$PROJECT_DIR$/homework_1/homework_5/calendar.html" />
+        <option value="$PROJECT_DIR$/homework_1/homework_10/tennis-dom.html" />
+        <option value="$PROJECT_DIR$/homework_1/homework_11/tennis_svg.html" />
+        <option value="$PROJECT_DIR$/homework_1/my.html/learn.html" />
+        <option value="$PROJECT_DIR$/homework_1/homework_6/calendar_2.html" />
+        <option value="$PROJECT_DIR$/homework_1/my.html/site_video.html" />
+        <option value="$PROJECT_DIR$/homework_1/site/site.css" />
+        <option value="$PROJECT_DIR$/homework_1/site/css_site.css" />
+        <option value="$PROJECT_DIR$/homework_1/site/site_video.html" />
+        <option value="$PROJECT_DIR$/project/start.html" />
+        <option value="$PROJECT_DIR$/homework_1/my.html/task_1.html" />
+        <option value="$PROJECT_DIR$/project/game.html" />
+        <option value="$PROJECT_DIR$/homework_1/my.html/1.html" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="10" />
+    <option name="y" value="20" />
+    <option name="width" value="1346" />
+    <option name="height" value="688" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="pvt_projects" type="b2602c69:ProjectViewProjectNode" />
+              <item name="pvt_projects" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="pvt_projects" type="b2602c69:ProjectViewProjectNode" />
+              <item name="pvt_projects" type="462c0819:PsiDirectoryNode" />
+              <item name="homework_2" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="pvt_projects" type="b2602c69:ProjectViewProjectNode" />
+              <item name="pvt_projects" type="462c0819:PsiDirectoryNode" />
+              <item name="project" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
+    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Angelina\Documents\web_shtorm_backup\11062019\project\images" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Angelina\Documents\web_shtorm_backup\11062019\project\images\balls" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="JavaScript Debug.1.html">
+    <configuration name="1.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/pvt_projects/homework_1/my.html/1.html" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
+    <configuration name="game.html (1)" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/pvt_projects/project/game.html" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
+    <configuration name="game.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/11062019/project/game.html" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
+    <configuration name="site_video.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/11062019/homework_1/site/site_video.html" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
+    <configuration name="task_1.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/11062019/homework_1/my.html/task_1.html" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JavaScript Debug.1.html" />
+        <item itemvalue="JavaScript Debug.game.html (1)" />
+        <item itemvalue="JavaScript Debug.game.html" />
+        <item itemvalue="JavaScript Debug.task_1.html" />
+        <item itemvalue="JavaScript Debug.site_video.html" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="efa3316e-51d0-41bc-acc3-0a60092a9e19" name="Default Changelist" comment="" />
+      <created>1560345446452</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1560345446452</updated>
+      <workItem from="1560345449373" duration="3997000" />
+      <workItem from="1560404847122" duration="13954000" />
+      <workItem from="1560456992603" duration="681000" />
+      <workItem from="1560494316276" duration="1726000" />
+      <workItem from="1560615908036" duration="7116000" />
+      <workItem from="1560673460869" duration="10492000" />
+      <workItem from="1561012778802" duration="26706000" />
+      <workItem from="1561048920741" duration="5215000" />
+      <workItem from="1561057952818" duration="5730000" />
+      <workItem from="1561110611484" duration="1112000" />
+      <workItem from="1561117383731" duration="2009000" />
+      <workItem from="1561379177367" duration="2329000" />
+      <workItem from="1561384112562" duration="342000" />
+      <workItem from="1561398488659" duration="2044000" />
+      <workItem from="1561469041064" duration="4206000" />
+      <workItem from="1561479868507" duration="224000" />
+      <workItem from="1561480111400" duration="5998000" />
+      <workItem from="1561489501225" duration="1282000" />
+      <workItem from="1561532800309" duration="623000" />
+      <workItem from="1561699024796" duration="9855000" />
+      <workItem from="1561742830201" duration="1578000" />
+      <workItem from="1562089112495" duration="7179000" />
+      <workItem from="1562142338291" duration="6539000" />
+      <workItem from="1562221474403" duration="3080000" />
+      <workItem from="1562327686646" duration="1895000" />
+      <workItem from="1562331641481" duration="2393000" />
+      <workItem from="1562403967169" duration="11810000" />
+      <workItem from="1562491956859" duration="4456000" />
+      <workItem from="1562509772710" duration="8119000" />
+      <workItem from="1562604963951" duration="5831000" />
+      <workItem from="1562687957159" duration="3554000" />
+      <workItem from="1562777965672" duration="8201000" />
+      <workItem from="1562864939008" duration="149000" />
+      <workItem from="1563007125887" duration="157000" />
+      <workItem from="1563007516468" duration="11548000" />
+      <workItem from="1563036650285" duration="2982000" />
+      <workItem from="1563047658664" duration="788000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="185900000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <editor active="true" />
+    <layout>
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24330357" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info active="true" anchor="bottom" id="Debug" order="3" sideWeight="0.4985119" visible="true" weight="0.39770868" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="8" />
+      <window_info anchor="bottom" id="Terminal" order="9" visible="true" weight="0.3289689" />
+      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5014881" side_tool="true" weight="0.39770868" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/homework_2/.idea/misc.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/homework_2/.idea/homework_2.iml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/homework_1/my.html/mvc.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="447">
+          <caret line="303" column="7" selection-start-line="303" selection-start-column="7" selection-end-line="303" selection-end-column="7" />
+          <folding>
+            <element signature="e#3046#4083#2" expanded="true" />
+            <element signature="n#style#0;n#p#4;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/homework_1/homework_11/1.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="529">
+          <caret line="74" column="13" selection-start-line="74" selection-start-column="13" selection-end-line="74" selection-end-column="13" />
+          <folding>
+            <element signature="n#style#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#3;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/homework_1/homework_11/tennis_canvas.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-115">
+          <caret line="163" lean-forward="true" selection-start-line="163" selection-end-line="163" />
+          <folding>
+            <element signature="n#style#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#3;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/homework_1/homework_8/example.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-763" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/homework_1/my.html/site.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="26" lean-forward="true" selection-start-line="4" selection-start-column="26" selection-end-line="4" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/homework_1/homework_5/method-counter.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-134" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/homework_1/homework_5/1.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-355" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/homework_1/homework_7/calendar.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/homework_1/homework_7/4.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/homework_1/homework_7/3.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/homework_1/homework_6/editable_list.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/project/images/balls/синий.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/homework_1/homework_9/clock_canvas.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="164">
+          <caret line="102" lean-forward="true" selection-start-line="102" selection-end-line="102" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/homework_1/homework_8/clock.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="122" lean-forward="true" selection-start-line="122" selection-end-line="122" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/homework_1/homework_2/compression.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="104">
+          <caret line="27" column="25" selection-start-line="27" selection-start-column="25" selection-end-line="27" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/homework_1/homework_12/cookie_birthday.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="63" selection-start-line="63" selection-end-line="63" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/homework_1/homework_11/tennis_svg.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="376">
+          <caret line="246" column="13" selection-start-line="246" selection-start-column="13" selection-end-line="246" selection-end-column="13" />
+          <folding>
+            <element signature="n#style#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#3;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/homework_1/homework_7/2.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-102" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/homework_1/homework_7/1.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-102" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/homework_1/homework_8/div_clock.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="110">
+          <caret line="127" column="32" lean-forward="true" selection-start-line="127" selection-start-column="32" selection-end-line="127" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/homework_1/homework_10/tennis-dom.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="297">
+          <caret line="85" selection-start-line="85" selection-end-line="85" />
+          <folding>
+            <element signature="n#style#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#3;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/homework_1/homework_6/calendar_2.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="867">
+          <caret line="123" column="70" lean-forward="true" selection-start-line="123" selection-start-column="70" selection-end-line="123" selection-end-column="70" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/homework_1/homework_5/calendar.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="31">
+          <caret line="58" column="9" lean-forward="true" selection-start-line="58" selection-start-column="9" selection-end-line="58" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/homework_1/my.html/site_video.html" />
+    <entry file="file://$PROJECT_DIR$/homework_1/task1/quadratic.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="38" column="7" lean-forward="true" selection-start-line="38" selection-start-column="7" selection-end-line="38" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/homework_1/site/images/intro.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/homework_1/site/site_video.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2414">
+          <caret line="142" column="7" selection-start-line="142" selection-start-column="7" selection-end-line="142" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/homework_1/site/css_site.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="99" column="21" selection-start-line="99" selection-start-column="21" selection-end-line="99" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/project/start.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="529">
+          <caret line="90" column="13" selection-start-line="90" selection-start-column="13" selection-end-line="90" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/homework_1/my.html/task_1.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="31">
+          <caret line="12" column="19" selection-start-line="12" selection-start-column="19" selection-end-line="12" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/homework_1/my.html/learn.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="3" lean-forward="true" selection-start-line="3" selection-start-column="3" selection-end-line="3" selection-end-column="26" />
+          <folding>
+            <element signature="n#style#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/project/1.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="43" column="50" lean-forward="true" selection-start-line="43" selection-start-column="50" selection-end-line="43" selection-end-column="62" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/homework_1/homework_4/methods_changeArray.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/homework_1/homework_4/methods_Array.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/homework_1/homework_4/methods.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/homework_1/homework_3/pow-and-calculate.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="309">
+          <caret line="49" column="7" lean-forward="true" selection-start-line="49" selection-start-column="7" selection-end-line="49" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/homework_1/homework_3/buttons-counter.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/homework_1/homework_2/countVowels.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="184">
+          <caret line="16" column="22" lean-forward="true" selection-start-line="16" selection-start-column="22" selection-end-line="16" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/project/game.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="595">
+          <caret line="35" column="26" selection-start-line="35" selection-start-column="26" selection-end-line="35" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/homework_1/homework_4/coctails.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1292">
+          <caret line="76" column="14" selection-start-line="76" selection-start-column="14" selection-end-line="76" selection-end-column="14" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/homework_1/my.html/1.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="291">
+          <caret line="36" column="26" selection-start-line="36" selection-start-column="26" selection-end-line="36" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+  </component>
+</project>

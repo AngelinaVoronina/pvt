@@ -1,0 +1,136 @@
+<!Doctype HTML>
+<html>
+<head>
+    <title> 1</title>
+    <meta charset="utf-8">
+</head>
+<body>
+<svg xmlns="http://www.w3.org/2000/svg" width=1000 height=1000 onload="init(evt)">
+    <circle id="1" r="205" cx="500" cy="300" fill="yellow"></circle>
+</svg>
+<script>
+
+    //Получить большой круг по id
+    let cent=document.getElementById("1");
+
+    //Рисуем зеленые круги и текст в них
+    function draw(angle,n){
+        let radius=170;
+
+        let greenCenterX=parseInt(cent.getAttribute('cx'))+radius*Math.sin(angle/180*3.14);
+        let greenCenterY=parseInt(cent.getAttribute('cy'))-radius*Math.cos(angle/180*3.14);
+        let r=28;
+
+
+        let d=document.createElementNS("http://www.w3.org/2000/svg" ,"circle");
+        d.setAttributeNS(null,'cx',String(greenCenterX));
+        d.setAttributeNS(null,'cy',String(greenCenterY));
+        d.setAttributeNS(null,'r',String(r));
+        d.setAttributeNS(null,'style','fill: green;');
+        let par=document.getElementsByTagName("svg")[0];
+        par.appendChild(d);
+
+        let textElement=document.createElementNS("http://www.w3.org/2000/svg" ,"text");
+        let text=document.createTextNode(String(n));
+        textElement.setAttributeNS(null,'x', String(greenCenterX));
+        textElement.setAttributeNS(null,'y', String(greenCenterY+r/3));
+        textElement.setAttributeNS(null,'font-size','28');
+        textElement.setAttributeNS(null, "text-anchor",'middle');
+        textElement.appendChild(text);
+        par.appendChild(textElement);
+    }
+
+    //Функция отрисовки электронных часов
+    function createTimer(){
+        let textElement=document.createElementNS("http://www.w3.org/2000/svg" ,"text");
+        textElement.setAttributeNS(null,'x', cent.getAttribute('cx'));
+        textElement.setAttributeNS(null,'y', String(parseInt(cent.getAttribute('cy'))/1.3));
+        textElement.setAttributeNS(null,'font-size','30');
+        textElement.setAttributeNS(null, "text-anchor",'middle');
+        textElement.setAttributeNS(null, "id",'txt');
+        let par=document.getElementsByTagName("svg")[0];
+        par.appendChild(textElement);
+    }
+
+    function createLines(){
+        //создание секундной стрелки
+        let seconds=document.createElementNS("http://www.w3.org/2000/svg" ,"line");
+        seconds.setAttributeNS(null, 'id', 'seconds');
+        seconds.setAttributeNS(null, 'x1', '0');
+        seconds.setAttributeNS(null, 'y1', '0');
+        seconds.setAttributeNS(null, 'x2', '0');
+        seconds.setAttributeNS(null, 'y2', '160');
+        seconds.setAttributeNS(null, 'stroke-width', '2');
+        seconds.setAttributeNS(null, 'stroke', 'black');
+        seconds.setAttributeNS(null, 'transform','translate(' + cent.getAttribute('cx') + ',' + cent.getAttribute('cy') + ') rotate(180 0 0)');
+        let par=document.getElementsByTagName("svg")[0];
+        par.appendChild(seconds);
+
+        //создание минутной стрелки
+        let minutes=document.createElementNS("http://www.w3.org/2000/svg" ,"line");
+        minutes.setAttributeNS(null, 'id', 'minutes');
+        minutes.setAttributeNS(null, 'x1', '0');
+        minutes.setAttributeNS(null, 'y1', '0');
+        minutes.setAttributeNS(null, 'x2', '0');
+        minutes.setAttributeNS(null, 'y2', '140');
+        minutes.setAttributeNS(null, 'stroke-width', '3');
+        minutes.setAttributeNS(null, 'stroke', 'black');
+        minutes.setAttributeNS(null, 'transform','translate(' + cent.getAttribute('cx') + ',' + cent.getAttribute('cy') + ') rotate(180 0 0)');
+        par.appendChild(minutes);
+
+        //создание часовой стрелки
+        let hours=document.createElementNS("http://www.w3.org/2000/svg" ,"line");
+        hours.setAttributeNS(null, 'id', 'hours');
+        hours.setAttributeNS(null, 'x1', '0');
+        hours.setAttributeNS(null, 'y1', '0');
+        hours.setAttributeNS(null, 'x2', '0');
+        hours.setAttributeNS(null, 'y2', '110');
+        hours.setAttributeNS(null, 'stroke-width', '5');
+        hours.setAttributeNS(null, 'stroke', 'black');
+        hours.setAttributeNS(null, 'transform','translate(' + cent.getAttribute('cx') + ',' + cent.getAttribute('cy') + ') rotate(180 0 0)');
+        par.appendChild(hours);
+    }
+
+
+    //Угол первого часа
+    let angle=30;
+
+    //Цикл выполняет функцию отрисовки кругов
+    for (let i=0;i<12;i++){
+        draw(angle,i+1);
+        angle+=30;
+    }
+    createTimer();
+    createLines();
+
+
+    // Функция получает текущее время, устанавливает стрелки на нужный угол, выводит электронные часы
+    function init() {
+        let
+            svgHours = document.querySelector("#hours"),
+            svgMinutes = document.querySelector("#minutes"),
+            svgSeconds = document.querySelector("#seconds"),
+            svgTimer=document.getElementById("txt");
+
+        setInterval(function(){
+            let dt = new Date(),
+                hours = dt.getHours(),
+                minutes = dt.getMinutes(),
+                seconds = dt.getSeconds(),
+                degSeconds = 180 + 360/60 * seconds,
+                degMinutes = 180 + 360/60 * minutes,
+                degHours = 180 + 360/12 * ( hours % 12 ) + degMinutes/60;
+
+
+            svgTimer.textContent=dt.toLocaleTimeString('en-US', {hour12: false});
+            svgHours.setAttribute('transform','translate(' + cent.getAttribute('cx') + ',' + cent.getAttribute('cy') + ') rotate('+degHours+' 0 0)');
+            svgMinutes.setAttribute('transform','translate(' + cent.getAttribute('cx') + ',' + cent.getAttribute('cy') + ') rotate('+degMinutes+' 0 0)');
+            svgSeconds.setAttribute('transform','translate(' + cent.getAttribute('cx') + ',' + cent.getAttribute('cy') + ') rotate('+degSeconds+' 0 0)');
+            console.clear();
+            //console.log(dt.toLocaleTimeString('en-US', {hour12: false}));
+        }, 1000);
+    }
+
+</script>
+</body>
+</html>

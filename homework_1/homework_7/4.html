@@ -1,0 +1,31 @@
+<!-- -->
+<!Doctype HTML>
+<html>
+<head>
+    <title> 1 </title>
+    <meta charset="utf-8">
+</head>
+<body>
+<input type="text" value="Имя" data-length="3"> <br> <br>
+<input type="text" value="Фамилия" data-length="3"> <br> <br>
+<input type="text" value="Отчество" data-length="3"> <br> <br>
+<script>
+    let symbols=function (){
+        if(parseInt(this.getAttribute("data-length"))==this.value.length){
+            this.style.borderColor="green";
+        }
+        else{
+            this.style.borderColor="red";
+        }
+
+    }
+
+    let elem=document.getElementsByTagName("input");
+    for (let i=0;i<elem.length;i++) {
+        elem[i].addEventListener('blur', symbols, false);
+
+    }
+
+</script>
+</body>
+</html>

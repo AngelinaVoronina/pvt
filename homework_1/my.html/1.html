@@ -1,0 +1,46 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+</head>
+<body>
+<script>
+// не опадают это True
+    let trees=["дуб", "сосна", "клен", "ольха", "ель"];
+    let counter=0;
+    let array=[];
+
+    function CreateForest(trees){
+        let self=this;
+        self.trees=trees;
+        self.list=false;
+        self.fallList= function (flag) {
+            self.list=flag;
+        };
+        self.getFallList = function (){
+            return self.list
+        }
+    }
+
+    function getRandomArbitary(min, max) {
+        return Math.random() * (max - min) + min;
+    }
+
+    function getTrees() {
+        for (let i = 0; i < 10; i++) {
+            array[i]=new CreateForest(trees[Math.round(getRandomArbitary(0, 4))]);
+            if (array[i].trees==="ель" || array[i].trees==="сосна"){
+                array[i].fallList(true);
+            }
+
+        }
+        console.log(array)
+    }
+
+    getTrees();
+
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,167 @@
+<!Doctype HTML>
+<html>
+<head>
+    <title> 1</title>
+    <meta charset="utf-8">
+    <style>
+        button{
+            border-radius: 5px;
+            background: wheat;
+            height: 25px;
+            width: 35px;
+        }
+        th {
+            background: red;
+            font-weight: bold;
+            color: white;
+            border: 1px solid grey;
+            width: 45px;
+            height: 45px;
+        }
+        table {
+            border-spacing: 1px;
+            border: 3px solid grey ;
+        }
+        .td1{
+            border: 1px solid grey;
+            padding: 3px;
+            text-align: center;
+            width: 45px;
+            height: 45px;
+            background: lightgrey;
+        }
+        .td2{
+            border: 1px solid grey;
+            padding: 3px;
+            text-align: center;
+            width: 45px;
+            height: 45px;
+            background: dimgray;
+            color:white;
+        }
+        #td3{
+            border: 1px solid grey;
+            padding: 3px;
+            text-align: center;
+            width: 45px;
+            height: 45px;
+            background: white;
+            color:darkolivegreen;
+        }
+
+
+    </style>
+</head>
+<body>
+<div id="calendar"></div>
+<script>
+    let year = prompt('Введите год', '');
+    let month = prompt('Введите месяц', '') - 1;
+    let monthNames = ["Январь", "Февраль", "Март", "Апрель", "Май", "Июнь",
+        "Июль", "Август", "Сентябрь", "Октябрь", "Ноябрь", "Декабрь"];
+    let cellNumnber=0; // в ней хранится ссылка на прошлую нажатую ячейку
+    let color=""; // в ней цвет прошлой нажатой ячейки
+
+    function getCalendar(id,year,mon) {
+        let elem = document.getElementById(id);
+        let table = '<table><tr><th><button id="1"><<</button></th><th><button id="2"><</button></th><th colspan="3">'+ monthNames[mon]+ '</th><th><button id="3">></button></th><th><button id="4">>></button></th></tr><tr>';
+        let d = new Date(year, mon);
+        let p = new Date(year, mon);
+        p.setDate(p.getDate()-getDay(d)-1);
+
+        //записывает пустые ячейки первой строки
+        for (let i = 0; i < getDay(d); i++) {
+            p.setDate(p.getDate()+1);
+            table += '<td id="td3">' + p.getDate() + '</td>';
+        }
+
+        //заполнение таблицы числами
+        while (d.getMonth() === mon) {
+            if (getDay(d) === 5 || getDay(d) === 6) {
+                table += '<td class="td2 selected">' + d.getDate() + '</td>';
+            }
+            else{
+                table += '<td class="td1 selected">' + d.getDate() + '</td>';
+            }
+
+            if (getDay(d) === 6) {
+                table += '</tr><tr>';
+            }
+
+            d.setDate(d.getDate() + 1); //переходим на следующий день
+        }
+
+        //если первое число следующего месяца не пн., заполняем пустыми ячейками
+        if (getDay(d) !== 0) {
+            for (let i = getDay(d); i < 7; i++) {
+                table += '<td id="td3">' + d.getDate() + '</td>';
+                d.setDate(d.getDate() + 1);
+            }
+            table += '</tr></table>';
+        }
+        else{
+            //удаляем последний <tr>
+            table = table.slice(0,-4) + '</table>'
+        }
+
+        //вставка таблицы в div
+        elem.innerHTML = table;
+        let btn1=document.getElementById("1");
+        let btn2=document.getElementById("2");
+        let btn3=document.getElementById("3");
+        let btn4=document.getElementById("4");
+        let cells=document.getElementsByClassName("selected");
+
+
+        for (let i=0; i<cells.length; i++){
+
+            cells[i].addEventListener("click", function(){
+                if (cellNumnber!==0){
+                    cellNumnber.setAttribute("style","background-color:" + color);
+                }
+                cellNumnber=cells[i];
+                color=cells[i].style.backgroundColor;
+                cells[i].setAttribute("style","background-color:red");
+            })
+        }
+
+
+        btn1.addEventListener("click", function(){
+            getCalendar("calendar", year-1, mon)
+        });
+
+        btn2.addEventListener("click", function(){
+            if (mon<1){
+                mon=12;
+                year=year-1;
+            }
+            getCalendar("calendar", year, mon-1)
+        });
+
+        btn3.addEventListener("click", function(){
+            if (mon>10){
+                mon=-1;
+                year=year+1;
+            }
+            getCalendar("calendar", year, mon+1)
+        });
+
+        btn4.addEventListener("click", function(){
+            getCalendar("calendar", year+1, mon)
+        });
+
+    }
+
+    //функция сдвиг дней недели
+    function getDay(date) {
+        let day = date.getDay(); //день недели
+        if (day === 0) day = 7;
+        return day - 1;
+    }
+
+    getCalendar("calendar", year, month);
+
+
+</script>
+</body>
+</html>

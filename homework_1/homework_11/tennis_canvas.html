@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #start{
+            background-color: grey;
+            width: 120px;
+            height: 35px;
+            border-radius: 5%;
+            color:white;
+        }
+        .header{
+            display: inline-block;
+            font-size: 30px;
+        }
+    </style>
+</head>
+<body>
+<div id="count">
+    <div class="header">
+        <button id="start">Старт!</button>
+    </div>
+    <div class="header" id="numL" style="width: 15%" align='right'>0</div>
+    <div class="header" style="width: 1%" align="center">:</div>
+    <div class="header" id="numR" style="width: 15%">0</div>
+</div>
+<br>
+<div>
+    <canvas id="canvas1" width="1000" height="580">
+    </canvas>
+</div>
+<script>
+    let context=document.getElementById("canvas1");
+    let ctx=context.getContext("2d");
+
+    let radius=30;
+    let racketWidth=25;
+    let racketHeight=150;
+    let x1=0;
+    let y1=0;
+    let x2=ctx.canvas.width - racketWidth;
+    let y2=0;
+
+    //Отрисовка поля, ракеток
+    function draw() {
+        ctx.fillStyle = "yellow";
+        ctx.lineWidth = 1;
+        ctx.fillRect(0, 0, ctx.canvas.width, ctx.canvas.height);
+
+        ctx.fillStyle = "red";
+        ctx.fillRect(x1, y1, racketWidth, racketHeight);
+
+        ctx.fillStyle = "green";
+        ctx.fillRect(x2, y2, racketWidth, racketHeight);
+    }
+
+
+    function drawBall(a,b){
+        ctx.fillStyle="blue";
+        ctx.lineWidth=1;
+        ctx.beginPath();
+        ctx.arc(a, b,radius, 0,2*Math.PI, false);
+        ctx.fill();
+
+    }
+    draw();
+    drawBall(ctx.canvas.width/2,ctx.canvas.height/2);
+
+    function move(e) {
+
+        if (map[38] === "keydown") {
+            if (y2 > 0) {
+               y2 = y2 - 10;
+            } else {
+               y2 = y2;
+            }
+        }
+
+        if (map[40] === "keydown") {
+            if (y2 + racketHeight < ctx.canvas.height) {
+                y2 = y2 + 10;
+            } else {
+                y2 = y2;
+            }
+        }
+
+        if (map[16] === "keydown") {
+            if (y1 > 0) {
+            y1 = y1 - 10;
+         }
+        else {
+            y1 = y1;
+        }
+        }
+
+
+        if (map[17] === "keydown") {
+            if (y1 + racketHeight < ctx.canvas.height) {
+                y1 = y1 + 10;
+            } else {
+                y1 = y1;
+            }
+        }
+    }
+
+
+    let ballH={
+        posX : ctx.canvas.width/2,
+        posY : ctx.canvas.height/2,
+        speedX : 10,
+        speedY : 7,
+        width : 30,
+        height: 30,
+
+        update : function() {
+            drawBall(this.posX,this.posY);
+        }
+    };
+
+    let areaH={
+        width : ctx.canvas.width,
+        height : ctx.canvas.height,
+    };
+
+    let a;
+
+    function start() {
+        ballH.posX = ctx.canvas.width/2;
+        ballH.posY = ctx.canvas.height/2;
+
+        // плавное движение - от 25 кадр/сек
+        a=setInterval(tick,40);
+    }
+    function stop() {
+       clearInterval(a);
+    }
+
+    function changeCounter(side){
+        if (side==="right"){
+            let r=document.getElementById("numL");
+            r.innerText=parseInt(r.textContent)+1;
+        }
+        if (side==="left"){
+            let r=document.getElementById("numR");
+            r.innerText=parseInt(r.textContent)+1;
+        }
+    }
+
+    function tick() {
+      //  ctx.clearRect(0, 0, ctx.canvas.width, ctx.canvas.height);
+
+        ballH.posX+=ballH.speedX;
+        // вылетел ли мяч правее стены?
+             if (ballH.posX+ballH.width>areaH.width-25 && ballH.posY+ballH.width<y2+racketHeight && ballH.posY+ballH.width>y2) {
+            console.log("True");
+            ballH.speedX=-ballH.speedX;
+            ballH.posX=areaH.width-ballH.width-25;
+        }
+        else if(ballH.posX+ballH.width>=areaH.width){
+            changeCounter("right");
+            stop();
+
+        }
+
+        // вылетел ли мяч левее стены?
+        if (  ballH.posX-ballH.width<25 && ballH.posY-ballH.width<y1+racketHeight && ballH.posY+ballH.width>y1 ) {
+            ballH.speedX=-ballH.speedX;
+            ballH.posX = 25+ballH.width;
+        }
+        else if(ballH.posX-ballH.width<=0){
+            changeCounter("left");
+            stop();
+        }
+
+
+        ballH.posY+=ballH.speedY;
+        // вылетел ли мяч ниже пола?
+        if ( ballH.posY+ballH.height>areaH.height ) {
+            ballH.speedY=-ballH.speedY;
+            ballH.posY=areaH.height-ballH.height;
+        }
+        // вылетел ли мяч выше потолка?
+        if (ballH.posY-ballH.height<0) {
+            ballH.speedY=-ballH.speedY;
+            ballH.posY=ballH.height;
+        }
+      //  draw();
+      //  ballH.update();
+    }
+
+    let map={};
+
+    function mainTick(){
+        ctx.clearRect(0, 0, ctx.canvas.width, ctx.canvas.height);
+        draw();
+        ballH.update();
+
+    }
+
+    window.addEventListener('load',function (){
+     s=setInterval(mainTick,40);
+    });
+
+    window.addEventListener("keydown", function (event) {
+        map[event.keyCode]=event.type;
+        move(event)
+    },false);
+    window.addEventListener("keyup", function (event) {
+        map[event.keyCode]=event.type;
+        move(event)
+    },false);
+
+    let s=document.getElementById("start");
+    s.addEventListener('click', function () {
+        start()
+    },false);
+
+
+
+
+</script>
+</body>
+</html>

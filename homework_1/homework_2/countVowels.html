@@ -1,0 +1,25 @@
+<!Doctype HTML>
+<html>
+<head>
+    <title> 1</title>
+    <meta charset="utf-8">
+</head>
+<body>
+<script>
+    function countVowelLetters(str){
+        var count=0;
+        var arr=["а","о","е","ё","у","ю","я","и","э","ы"];
+        for (var i=0;i<str.length;i++){
+            if (arr.indexOf(str[i])>=0){
+                count+=1;
+            }
+        }
+        return(count);
+    }
+    var str="Пришла зима, запахло…";
+    console.log("Количество гласных= " + countVowelLetters(str));
+
+
+</script>
+</body>
+</html>

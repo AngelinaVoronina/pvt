@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #area{
+            width: 1000px;
+            height: 580px;
+            background: yellow;
+            position: relative;
+        }
+        #left{
+            background: red;
+            width:25px ;
+            height: 150px;
+            position: absolute;
+        }
+        #right{
+            background: green;
+            width:25px ;
+            height: 150px;
+            position:absolute;
+            right: 0px;
+            top:0px;
+
+        }
+        #ball{
+            background: blue;
+            border-radius: 50%;
+            width: 60px;
+            height: 60px;
+            position: absolute;
+            right: 440px;
+            top: 300px;
+        }
+
+        #count {
+            overflow: hidden;
+            width: 100%;
+
+        }
+        .header{
+            display: inline-block;
+            font-size: 30px;
+       }
+
+        #start{
+            background-color: grey;
+            width: 120px;
+            height: 35px;
+            border-radius: 5%;
+            color:white;
+        }
+
+    </style>
+</head>
+<body>
+<div id="count">
+    <div class="header">
+        <button id="start">Старт!</button>
+    </div>
+    <div class="header" id="numL" style="width: 15%" align='right'>0</div>
+    <div class="header" style="width: 1%" align="center">:</div>
+    <div class="header" id="numR" style="width: 15%">0</div>
+</div>
+<br>
+<div id="area">
+    <div id="left"></div>
+    <div id="right"></div>
+    <div id="ball"></div>
+</div>
+
+<script>
+    function move(e) {
+        if (map[38] === "keydown") {
+            let right = document.getElementById("right");
+            let style = window.getComputedStyle(right);
+            let top = style.getPropertyValue('top');
+            if (parseInt(top) > 0) {
+                right.style.top = parseInt(top) - 10 + "px";
+            } else {
+                right.style.top = parseInt(top) + "px"
+            }
+        }
+
+        if (map[40] === "keydown") {
+            let right = document.getElementById("right");
+            let style = window.getComputedStyle(right);
+            let top = style.getPropertyValue('top');
+            let height = style.getPropertyValue('height');
+            let area = document.getElementById("area");
+            let styleF = window.getComputedStyle(area);
+            let areaH = styleF.getPropertyValue("height");
+            if (parseInt(top) + parseInt(height) < parseInt(areaH)) {
+                right.style.top = parseInt(top) + 10 + "px";
+            } else {
+                right.style.top = parseInt(top) + "px"
+            }
+        }
+
+        if (map[16] === "keydown") {
+            let left = document.getElementById("left");
+            let style = window.getComputedStyle(left);
+            let top = style.getPropertyValue('top');
+            if (parseInt(top) > 0) {
+                left.style.top = parseInt(top) - 10 + "px";
+            } else {
+                left.style.top = parseInt(top) + "px"
+            }
+        }
+        if (map[17] === "keydown") {
+            let left = document.getElementById("left");
+            let style = window.getComputedStyle(left);
+            let top = style.getPropertyValue('top');
+            let height = style.getPropertyValue('height');
+            let area = document.getElementById("area");
+            let styleF = window.getComputedStyle(area);
+            let areaH = styleF.getPropertyValue("height");
+            if (parseInt(top) + parseInt(height) < parseInt(areaH)) {
+                left.style.top = parseInt(top) + 10 + "px";
+            } else {
+                left.style.top = parseInt(top) + "px"
+            }
+        }
+    }
+
+    let ballH={
+        posX : 500,
+        posY : 300,
+        speedX : 10,
+        speedY : 7,
+        width : 60,
+        height: 60,
+
+        update : function() {
+            let ballElem=document.getElementById('ball');
+            ballElem.style.left=this.posX+"px";
+            ballElem.style.top=this.posY+"px";
+        }
+    };
+
+    let areaH={
+        width : 1000,
+        height : 580,
+    };
+
+    let a;
+
+    function start() {
+        ballH.posX = 500;
+        ballH.posY =300;
+        // плавное движение - от 25 кадр/сек
+        a=setInterval(tick,40);
+    }
+    function stop() {
+        clearInterval(a)
+    }
+
+    function changeCounter(side){
+        if (side==="right"){
+            let r=document.getElementById("numL");
+            r.innerText=parseInt(r.textContent)+1;
+        }
+        if (side==="left"){
+            let r=document.getElementById("numR");
+            r.innerText=parseInt(r.textContent)+1;
+        }
+    }
+
+    function tick() {
+        let right = document.getElementById("right");
+        let style = window.getComputedStyle(right);
+        let top = parseInt(style.getPropertyValue('top'));
+        let height = parseInt(style.getPropertyValue('height'));
+        let left = document.getElementById("left");
+        let styleL = window.getComputedStyle(left);
+        let topL = parseInt(styleL.getPropertyValue('top'));
+        let heightL = parseInt(style.getPropertyValue('height'));
+        ballH.posX+=ballH.speedX;
+        // вылетел ли мяч правее стены?
+        if (ballH.posX+ballH.width>areaH.width-25 && ballH.posY<top+height && ballH.posY+ballH.width>top) {
+            ballH.speedX=-ballH.speedX;
+            ballH.posX=areaH.width-ballH.width-25;
+        }
+        else if(ballH.posX+ballH.width>=areaH.width){
+            changeCounter("right");
+            stop();
+        }
+
+        // вылетел ли мяч левее стены?
+        if ( ballH.posX<25 && ballH.posY<topL+heightL && ballH.posY+ballH.width>topL) {
+            ballH.speedX = -ballH.speedX;
+            ballH.posX = 25;
+        }
+        else if(ballH.posX<=0){
+            changeCounter("left");
+            stop();
+        }
+
+        ballH.posY+=ballH.speedY;
+        // вылетел ли мяч ниже пола?
+        if ( ballH.posY+ballH.height>areaH.height ) {
+            ballH.speedY=-ballH.speedY;
+            ballH.posY=areaH.height-ballH.height;
+        }
+        // вылетел ли мяч выше потолка?
+        if ( ballH.posY<0 ) {
+            ballH.speedY=-ballH.speedY;
+            ballH.posY=0;
+        }
+
+        ballH.update();
+    }
+
+    ballH.update();
+
+
+    let map={};
+
+
+    window.addEventListener("keydown", function (event) {
+        map[event.keyCode]=event.type;
+        move(event)
+    },false);
+    window.addEventListener("keyup", function (event) {
+        map[event.keyCode]=event.type;
+        move(event)
+    },false);
+
+
+    let s=document.getElementById("start");
+    s.addEventListener('click', function () {
+        start()
+    },false);
+
+
+</script>
+</body>
+</html>

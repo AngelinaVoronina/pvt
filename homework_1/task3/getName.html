@@ -1,0 +1,97 @@
+<!Doctype HTML>
+<html>
+<head>
+    <title> 1</title>
+    <meta charset="utf-8">
+</head>
+<body>
+<script>
+    function getsname(){
+        var sname=prompt("Введите Ваше фамилию","");
+
+        if ((isFinite(parseInt(sname))==false) && sname.length > 1 && sname.length<=20  && sname!=" "){
+            return sname;
+        }
+        else{
+            alert("Некорректный ввод");
+            var sname = getsname();
+        }
+        return sname;
+    }
+
+    function getname(){
+        var name=prompt("Введите Ваше имя","");
+        if ((isFinite(parseInt(name))==false) && name.length > 1 && name.length<=20  && name!=" "){
+            return name;
+        }
+        else{
+            alert("Некорректный ввод");
+            var name = getname();
+        }
+        return name;
+    }
+
+    function getoname(){
+        var oname=prompt("Введите Ваше отчество","");
+        if ((isFinite(parseInt(oname))==false) && oname.length > 1 && oname.length<=20  && oname!=" "){
+            return oname;
+        }
+        else{
+            alert("Некорректный ввод");
+            var oname = getoname();
+        }
+        return oname;
+    }
+
+    function getAge(){
+        var year=Number(prompt("Введите Ваше возраст",""));
+        typeof(year)
+        if(typeof(year)=='number' && year<=120 && year>0){
+            return year;
+        }
+        else{
+            alert("Некорректный ввод");
+            var year = getAge();
+        }
+        return year;
+    }
+
+    var sname=getsname();
+    var name=getname();
+    var oname=getoname();
+    var year=getAge();
+
+    if (year>=18){
+        var adult='Вы уже совершеннолетний';
+    }
+    else{
+        var adult='Вы несовершеннолетний';
+    }
+
+    if (year>=60){
+        var old='да';
+    }
+    else{
+        var old='нет';
+    }
+
+    var day=year*365;
+    var male=confirm("Ваш пол мужской?");
+    if (male==true){
+        var s='мужской';
+    }
+    else{
+        var s='женский';
+    }
+
+    alert("Ваше ФИО: "+" "+ sname +" "+ name +" "+ oname + "\n"+
+        "Ваш возраст в годах: "+ year+"\n"+
+        "Ваш возраст в днях: "+ day+"\n"+
+        adult+"\n"+
+        "Ваш пол: "+ s+"\n"+
+        "Вы на пенсии: "+ old)
+
+
+</script>
+</body>
+</html>
