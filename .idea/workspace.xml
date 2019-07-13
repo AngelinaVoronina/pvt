@@ -2,91 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="efa3316e-51d0-41bc-acc3-0a60092a9e19" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/11062019.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/homework_1/.idea/homework_1.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/homework_1/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/homework_1/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/homework_1/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/homework_1/example_ball.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/homework_1/homework_10/tennis-dom.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/homework_1/homework_11/1.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/homework_1/homework_11/tennis_canvas.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/homework_1/homework_11/tennis_svg.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/homework_1/homework_12/cookie_birthday.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/homework_1/homework_2/calcWithFunc.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/homework_1/homework_2/compression.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/homework_1/homework_2/countVowels.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/homework_1/homework_3/buttons-counter.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/homework_1/homework_3/pow-and-calculate.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/homework_1/homework_4/coctails.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/homework_1/homework_4/methods.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/homework_1/homework_4/methods_Array.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/homework_1/homework_4/methods_changeArray.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/homework_1/homework_4/коктейль.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/homework_1/homework_5/1.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/homework_1/homework_5/calendar.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/homework_1/homework_5/method-counter.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/homework_1/homework_6/calendar_2.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/homework_1/homework_6/editable_list.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/homework_1/homework_7/1.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/homework_1/homework_7/2.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/homework_1/homework_7/3.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/homework_1/homework_7/4.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/homework_1/homework_7/calendar.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/homework_1/homework_8/1.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/homework_1/homework_8/clock.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/homework_1/homework_8/div_clock.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/homework_1/homework_8/example.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/homework_1/homework_9/clock_canvas.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/homework_1/my.html/1.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/homework_1/my.html/canvas.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/homework_1/my.html/learn.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/homework_1/my.html/mvc.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/homework_1/my.html/site.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/homework_1/my.html/task_1.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/homework_1/site/css_site.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/homework_1/site/images/1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/homework_1/site/images/2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/homework_1/site/images/3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/homework_1/site/images/intro.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/homework_1/site/images/services/creativity.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/homework_1/site/images/services/css-html.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/homework_1/site/images/services/digital.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/homework_1/site/images/services/photography.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/homework_1/site/images/services/seo.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/homework_1/site/images/services/webdesign.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/homework_1/site/site_video.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/homework_1/task1/quadratic.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/homework_1/task2/def(num).html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/homework_1/task2/fizzBuzz.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/homework_1/task3/getName.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/homework_2/.idea/homework_2.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/homework_2/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/homework_2/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/homework_2/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/project/1.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/project/game.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/project/images/1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/project/images/11.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/project/images/22.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/project/images/a.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/project/images/balls/blue.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/project/images/balls/green.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/project/images/balls/purple.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/project/images/balls/red.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/project/images/balls/yellow.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/project/images/balls/синий.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/project/images/green.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/project/images/intro.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/project/images/red.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/project/images/yellow.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/project/images/кристалл.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/project/start.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/homework_1/.idea/homework_1.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/homework_1/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/homework_1/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/homework_1/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/homework_2/.idea/homework_2.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/homework_2/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/homework_2/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/homework_2/.idea/workspace.xml" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -134,7 +59,11 @@
       </file>
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/.gitignore">
-          <provider selected="true" editor-type-id="text-editor" />
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="351">
+              <caret line="64" column="37" selection-start-line="64" selection-start-column="37" selection-end-line="64" selection-end-column="37" />
+            </state>
+          </provider>
         </entry>
       </file>
     </leaf>
@@ -183,6 +112,7 @@
         <option value="$PROJECT_DIR$/homework_1/my.html/task_1.html" />
         <option value="$PROJECT_DIR$/project/game.html" />
         <option value="$PROJECT_DIR$/homework_1/my.html/1.html" />
+        <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
   </component>
@@ -205,16 +135,6 @@
             <path>
               <item name="pvt_projects" type="b2602c69:ProjectViewProjectNode" />
               <item name="pvt_projects" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="pvt_projects" type="b2602c69:ProjectViewProjectNode" />
-              <item name="pvt_projects" type="462c0819:PsiDirectoryNode" />
-              <item name="homework_2" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="pvt_projects" type="b2602c69:ProjectViewProjectNode" />
-              <item name="pvt_projects" type="462c0819:PsiDirectoryNode" />
-              <item name="project" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -322,16 +242,15 @@
       <workItem from="1563007125887" duration="157000" />
       <workItem from="1563007516468" duration="11548000" />
       <workItem from="1563036650285" duration="2982000" />
-      <workItem from="1563047658664" duration="788000" />
+      <workItem from="1563047658664" duration="1766000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="185900000" />
+    <option name="totallyTimeSpent" value="186878000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24330357" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -631,7 +550,11 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="351">
+          <caret line="64" column="37" selection-start-line="64" selection-start-column="37" selection-end-line="64" selection-end-column="37" />
+        </state>
+      </provider>
     </entry>
   </component>
 </project>
