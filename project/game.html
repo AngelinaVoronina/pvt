@@ -151,7 +151,7 @@
         },false)
     }
 
-    function pressBall(mainBall){
+    async function pressBall(mainBall){
         let firstCheck=true;
         let activeBall="";
         let st="";
@@ -163,22 +163,27 @@
         });
         if (firstCheck===true){
             mainBall.setStatus(true);
-            //st = document.getElementById(mainBall.getId());
-            //st.setAttributeNS(null,'r','30');
+
             return 0;
         }
         else{
-            //console.log(mainBall.getId());
                 if (activeBall.getStatus()===true && mainBall.getPosition()[0] - 60 === activeBall.getPosition()[0] &&
                     mainBall.getPosition()[1]===activeBall.getPosition()[1]){
                     mainBall.move("left");
                     activeBall.move("right");
                     changeLink(mainBall, activeBall);
-
-                    //st = document.getElementById(activeBall.getId());
-                    //st.setAttributeNS(null,'r','26');
                     activeBall.setStatus(false);
-                    startDestroy();
+
+
+                    let check = await startDestroy();
+
+                    if (check===false){
+                        console.log("1")
+                        mainBall.move("right");
+                        activeBall.move("left");
+                        changeLink(mainBall, activeBall);
+                    }
+
                     activeBall="";
                     return 0;
                 }
@@ -187,10 +192,15 @@
                     mainBall.move("right");
                     activeBall.move("left");
                     changeLink(mainBall, activeBall);
-                    //st = document.getElementById(activeBall.getId());
-                    //st.setAttributeNS(null,'r','26');
                     activeBall.setStatus(false);
-                    startDestroy();
+
+                    let check = await startDestroy();
+                    if (check===false){
+                        mainBall.move("left");
+                        activeBall.move("right");
+                        changeLink(mainBall, activeBall);
+                    }
+
                     activeBall="";
                     return 0;
                 }
@@ -199,10 +209,14 @@
                     mainBall.move("up");
                     activeBall.move("down");
                     changeLink(mainBall, activeBall);
-                    // st = document.getElementById(activeBall.getId());
-                    // st.setAttributeNS(null,'r','26');
                     activeBall.setStatus(false);
-                    startDestroy();
+
+                    let check = await startDestroy();
+                    if (check===false){
+                        mainBall.move("down");
+                        activeBall.move("up");
+                        changeLink(mainBall, activeBall);
+                    }
                     activeBall="";
                     return 0;
                 }
@@ -211,10 +225,14 @@
                     mainBall.move("down");
                     activeBall.move("up");
                     changeLink(mainBall, activeBall);
-                    //st = document.getElementById(activeBall.getId());
-                    //  st.setAttributeNS(null,'r','26');
                     activeBall.setStatus(false);
-                    startDestroy();
+
+                    let check = await startDestroy();
+                    if (check===false){
+                        mainBall.move("up");
+                        activeBall.move("down");
+                        changeLink(mainBall, activeBall);
+                    }
                     activeBall="";
                     return 0;
                 }
@@ -336,7 +354,6 @@
                         objCells[i][j].setBall(objCells[i-1][j].getBall());
                         objCells[i][j].setFill(true);
                         objCells[i-1][j].setFill(false);
-                       // window.setInterval(function (){},5000);
                     }
                 }
             }
@@ -364,41 +381,31 @@
         objBalls.splice(position,1);
     }
 
-    function addNew(){
-        for (let i=0; i<8; i++){
-            for (let j=0; j<6; j++){
-                if (objCells[i][j].getFill()===false){
-                    objBalls.push(new Ball(objCells[i][j].getBallPosition()[0],objCells[i][j].getBallPosition()[1],colors[Math.round(getRandomArbitary(0,4))],ballId, objCells[i][j]));
-                    objBalls[objBalls.length-1].drawBalls();
-                    objCells[i][j].setBall(objBalls[objBalls.length-1]);
-                    objCells[i][j].setFill(true);
-                    ballId++;
-                }
-            }
-        }
-    }
-
 
 
     async function startDestroy() {
         console.log("startDestroy");
         await timeout(1000);
         let check=await checkInLine();
-        //setTimeout(checkInLine,5000);
+        let mainCheck=check;
 
         while (check===true){
             console.log("fall");
-            /*let [check]=await Promise.all([
-                fall().then(checkInLine),timeout(5000)
-            ]);*/
             await timeout(1000);
             await fall();
             await timeout(1000);
             check=await checkInLine();
             await timeout(1000);
         }
-        console.log(objBalls)
 
+        console.log(objBalls);
+
+        if (mainCheck===false){
+            return false
+        }
+        else{
+            return true
+        }
     }
 
 

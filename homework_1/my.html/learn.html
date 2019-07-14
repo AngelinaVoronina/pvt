@@ -2,53 +2,28 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <style>
-        #field {
-            width: 200px;
-            height: 150px;
-            border: 10px groove black;
-            background-color: #00FF00;
-            position: relative;
-            overflow: hidden;
-        }
-
-        #ball {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            margin-left: -20px;
-            margin-top: -20px;
-        }
-    </style>
 </head>
-
-<body style="height:2000px">
-
-Кликните на любое место поля, чтобы мяч перелетел туда.
-<br> Мяч никогда не вылетит за границы поля.
-
-
-<div id="field">
-    <img src="https://js.cx/clipart/ball.svg" id="ball"> . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
-    . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
-</div>
+<body>
 <script>
 
-    let elem = document.getElementById("field");
-    let ball=document.getElementById("ball");
-    let style = window.getComputedStyle(ball);
-    top = style.getPropertyValue('top');
-    elem.onclick = function (event){
-        if (event.clientY)
-        ball.style.top=event.clientY + "px";
-        ball.style.left=event.clientX + "px"
+    let arr=[[],[],[],[]];
+    let count=1;
+    let str="";
+
+    for (let i=0; i<4; i++){
+        for (let j=0; j<4;j++){
+            arr[i][j]=count;
+            count++;
+            str+=arr[i][j] + "    ";
+
+        }
+        console.log(str)
+        str=""
     }
 
 
 
 
 </script>
-
 </body>
-
 </html>

@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="efa3316e-51d0-41bc-acc3-0a60092a9e19" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/git_test.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/homework_1/my.html/learn.html" beforeDir="false" afterPath="$PROJECT_DIR$/homework_1/my.html/learn.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/game.html" beforeDir="false" afterPath="$PROJECT_DIR$/project/game.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -15,53 +17,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/project/game.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="595">
-              <caret line="35" column="26" selection-start-line="35" selection-start-column="26" selection-end-line="35" selection-end-column="26" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/homework_1/homework_4/coctails.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1292">
-              <caret line="76" column="14" selection-start-line="76" selection-start-column="14" selection-end-line="76" selection-end-column="14" />
-              <folding>
-                <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/homework_1/my.html/1.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="291">
-              <caret line="36" column="26" selection-start-line="36" selection-start-column="26" selection-end-line="36" selection-end-column="26" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/.gitignore">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="283">
-              <caret line="64" column="37" selection-start-line="64" selection-start-column="37" selection-end-line="64" selection-end-column="37" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/git_test.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="9" column="7" lean-forward="true" selection-start-line="9" selection-start-column="7" selection-end-line="9" selection-end-column="7" />
+            <state relative-caret-position="150">
+              <caret line="184" column="40" lean-forward="true" selection-start-line="184" selection-start-column="40" selection-end-line="184" selection-end-column="40" />
             </state>
           </provider>
         </entry>
@@ -102,7 +62,6 @@
         <option value="$PROJECT_DIR$/homework_1/homework_5/calendar.html" />
         <option value="$PROJECT_DIR$/homework_1/homework_10/tennis-dom.html" />
         <option value="$PROJECT_DIR$/homework_1/homework_11/tennis_svg.html" />
-        <option value="$PROJECT_DIR$/homework_1/my.html/learn.html" />
         <option value="$PROJECT_DIR$/homework_1/homework_6/calendar_2.html" />
         <option value="$PROJECT_DIR$/homework_1/my.html/site_video.html" />
         <option value="$PROJECT_DIR$/homework_1/site/site.css" />
@@ -110,10 +69,11 @@
         <option value="$PROJECT_DIR$/homework_1/site/site_video.html" />
         <option value="$PROJECT_DIR$/project/start.html" />
         <option value="$PROJECT_DIR$/homework_1/my.html/task_1.html" />
-        <option value="$PROJECT_DIR$/project/game.html" />
         <option value="$PROJECT_DIR$/homework_1/my.html/1.html" />
-        <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/git_test.html" />
+        <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/homework_1/my.html/learn.html" />
+        <option value="$PROJECT_DIR$/project/game.html" />
       </list>
     </option>
   </component>
@@ -138,6 +98,22 @@
             <path>
               <item name="pvt_projects" type="b2602c69:ProjectViewProjectNode" />
               <item name="pvt_projects" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="pvt_projects" type="b2602c69:ProjectViewProjectNode" />
+              <item name="pvt_projects" type="462c0819:PsiDirectoryNode" />
+              <item name="homework_1" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="pvt_projects" type="b2602c69:ProjectViewProjectNode" />
+              <item name="pvt_projects" type="462c0819:PsiDirectoryNode" />
+              <item name="homework_1" type="462c0819:PsiDirectoryNode" />
+              <item name="my.html" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="pvt_projects" type="b2602c69:ProjectViewProjectNode" />
+              <item name="pvt_projects" type="462c0819:PsiDirectoryNode" />
+              <item name="project" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -173,7 +149,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JavaScript Debug.1.html">
+  <component name="RunManager" selected="JavaScript Debug.game.html (1)">
     <configuration name="1.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/pvt_projects/homework_1/my.html/1.html" useBuiltInWebServerPort="true">
       <method v="2" />
     </configuration>
@@ -183,7 +159,7 @@
     <configuration name="game.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/11062019/project/game.html" useBuiltInWebServerPort="true">
       <method v="2" />
     </configuration>
-    <configuration name="site_video.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/11062019/homework_1/site/site_video.html" useBuiltInWebServerPort="true">
+    <configuration name="learn.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/pvt_projects/homework_1/my.html/learn.html" useBuiltInWebServerPort="true">
       <method v="2" />
     </configuration>
     <configuration name="task_1.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/11062019/homework_1/my.html/task_1.html" useBuiltInWebServerPort="true">
@@ -191,11 +167,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JavaScript Debug.1.html" />
         <item itemvalue="JavaScript Debug.game.html (1)" />
+        <item itemvalue="JavaScript Debug.learn.html" />
+        <item itemvalue="JavaScript Debug.1.html" />
         <item itemvalue="JavaScript Debug.game.html" />
         <item itemvalue="JavaScript Debug.task_1.html" />
-        <item itemvalue="JavaScript Debug.site_video.html" />
       </list>
     </recent_temporary>
   </component>
@@ -245,15 +221,26 @@
       <workItem from="1563007125887" duration="157000" />
       <workItem from="1563007516468" duration="11548000" />
       <workItem from="1563036650285" duration="2982000" />
-      <workItem from="1563047658664" duration="2158000" />
+      <workItem from="1563047658664" duration="2508000" />
+      <workItem from="1563092092034" duration="3421000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="187270000" />
+    <option name="totallyTimeSpent" value="191041000" />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24330357" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -264,10 +251,10 @@
       <window_info active="true" anchor="bottom" id="Debug" order="3" sideWeight="0.4985119" visible="true" weight="0.39770868" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.3289689" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" weight="0.3289689" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="9" visible="true" weight="0.3289689" />
+      <window_info anchor="bottom" id="Terminal" order="9" weight="0.3289689" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5014881" side_tool="true" weight="0.39770868" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -278,12 +265,8 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/homework_2/.idea/misc.xml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/homework_2/.idea/homework_2.iml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/homework_2/.idea/misc.xml" />
+    <entry file="file://$PROJECT_DIR$/homework_2/.idea/homework_2.iml" />
     <entry file="file://$PROJECT_DIR$/homework_1/my.html/mvc.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="447">
@@ -482,16 +465,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/homework_1/my.html/learn.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="3" lean-forward="true" selection-start-line="3" selection-start-column="3" selection-end-line="3" selection-end-column="26" />
-          <folding>
-            <element signature="n#style#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/project/1.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="195">
@@ -525,16 +498,24 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/project/game.html">
+    <entry file="file://$PROJECT_DIR$/git_test.html" />
+    <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="595">
-          <caret line="35" column="26" selection-start-line="35" selection-start-column="26" selection-end-line="35" selection-end-column="26" />
+        <state relative-caret-position="283">
+          <caret line="64" column="37" selection-start-line="64" selection-start-column="37" selection-end-line="64" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/homework_1/my.html/1.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="34" lean-forward="true" selection-start-line="8" selection-start-column="34" selection-end-line="8" selection-end-column="34" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/homework_1/homework_4/coctails.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1292">
+        <state relative-caret-position="286">
           <caret line="76" column="14" selection-start-line="76" selection-start-column="14" selection-end-line="76" selection-end-column="14" />
           <folding>
             <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -545,24 +526,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/homework_1/my.html/1.html">
+    <entry file="file://$PROJECT_DIR$/homework_1/my.html/learn.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="291">
-          <caret line="36" column="26" selection-start-line="36" selection-start-column="26" selection-end-line="36" selection-end-column="26" />
+        <state relative-caret-position="238">
+          <caret line="14" column="28" lean-forward="true" selection-start-line="14" selection-start-column="28" selection-end-line="14" selection-end-column="28" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
+    <entry file="file://$PROJECT_DIR$/project/game.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="283">
-          <caret line="64" column="37" selection-start-line="64" selection-start-column="37" selection-end-line="64" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/git_test.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="7" lean-forward="true" selection-start-line="9" selection-start-column="7" selection-end-line="9" selection-end-column="7" />
+        <state relative-caret-position="150">
+          <caret line="184" column="40" lean-forward="true" selection-start-line="184" selection-start-column="40" selection-end-line="184" selection-end-column="40" />
         </state>
       </provider>
     </entry>
