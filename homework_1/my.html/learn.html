@@ -6,21 +6,16 @@
 <body>
 <script>
 
-    let arr=[[],[],[],[]];
-    let count=1;
-    let str="";
+    let str="Q WERRTYUIOP";
+    let arr=[];
+    let array=[];
 
-    for (let i=0; i<4; i++){
-        for (let j=0; j<4;j++){
-            arr[i][j]=count;
-            count++;
-            str+=arr[i][j] + "    ";
+    arr=str.split(" ");
 
+        for (let i=0; i<arr.length; i++){
+            array=arr.push(arr[i]);
         }
-        console.log(str)
-        str=""
-    }
-
+    console.log(array)
 
 
 
