@@ -22,11 +22,13 @@ body{
 
 .container {
     display: flex;
-    height: 97vh;
+    width: 100%;
+    margin: 0 auto;
 }
 .play{
-    align-content: center;
-    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    width: 60%;
 }
 #buttons {
     margin: auto auto auto 0;
@@ -68,7 +70,43 @@ li {
 
 .name{
     animation: nabor-teksta 4s;
-    text-align: left;
     overflow: hidden;
+    text-align: center;
     white-space: nowrap;
+}
+
+@media screen and (max-width: 800px) {
+    .intro{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        max-width: 800px;
+        height: 100vh;
+        background: url(../images/02.jpg)  no-repeat 0 100% fixed;
+        background-size: cover; /* занимало всю пдощать окна */
+    }
+
+    .container {
+        display: block;
+        width: 100%;
+        margin: 0 auto;
+    }
+    .play {
+        display: flex;
+        justify-content: center;
+        height: 50%;
+        width: 100%;
+    }
+
+    .name{
+        font-size:90px ;
+        color: coral;
+        text-shadow: 4px 3px 0px #000000, 9px 8px 0px rgba(0,0,0,0.15);
+    }
+    #buttons {
+        margin: auto auto auto 0;
+        align-items: center;
+    }
 }
