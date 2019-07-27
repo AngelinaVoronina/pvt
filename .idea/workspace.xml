@@ -2,15 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="efa3316e-51d0-41bc-acc3-0a60092a9e19" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/project/css/main_CSS.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/project/js/game.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project/css/start.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project/js/MVS.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project/js/SPA.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project/js/start.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project/js/test.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/homework_1/my.html/learn.html" beforeDir="false" afterPath="$PROJECT_DIR$/homework_1/my.html/learn.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/homework_1/site/site_video.html" beforeDir="false" afterPath="$PROJECT_DIR$/homework_1/site/site_video.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/css/main_CSS.css" beforeDir="false" afterPath="$PROJECT_DIR$/project/css/main_CSS.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/project/game.html" beforeDir="false" afterPath="$PROJECT_DIR$/project/game.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/images/11.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/project/images/11.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/images/22.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/project/images/22.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/images/intro.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/images/01.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/project/images/01.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/images/2.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/project/images/2.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/images/6.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/images/8.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/images/9.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/project/images/9.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/js/game.js" beforeDir="false" afterPath="$PROJECT_DIR$/project/js/game.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/project/start.html" beforeDir="false" afterPath="$PROJECT_DIR$/project/start.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -25,10 +30,37 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/project/css/main_CSS.css">
+        <entry file="file://$PROJECT_DIR$/project/js/game.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="286">
-              <caret line="35" column="1" lean-forward="true" selection-start-line="35" selection-start-column="1" selection-end-line="35" selection-end-column="1" />
+            <state relative-caret-position="181">
+              <caret line="163" column="4" selection-start-line="163" selection-start-column="4" selection-end-line="165" selection-end-column="16" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/project/css/start.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="221">
+              <caret line="22" column="12" lean-forward="true" selection-start-line="22" selection-start-column="12" selection-end-line="22" selection-end-column="12" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/project/start.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret column="13" selection-start-column="13" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/project/js/start.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="119">
+              <caret line="7" column="28" selection-start-line="7" selection-start-column="28" selection-end-line="7" selection-end-column="28" />
             </state>
           </provider>
         </entry>
@@ -36,17 +68,44 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/project/game.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="269">
-              <caret line="28" column="79" selection-start-line="28" selection-start-column="79" selection-end-line="28" selection-end-column="79" />
+            <state relative-caret-position="-343">
+              <caret line="6" column="1" lean-forward="true" selection-start-line="6" selection-start-column="1" selection-end-line="6" selection-end-column="38" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/project/js/game.js">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/project/js/SPA.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="184">
-              <caret line="28" column="45" selection-start-line="28" selection-start-column="45" selection-end-line="28" selection-end-column="45" />
+              <caret line="49" column="15" lean-forward="true" selection-start-line="49" selection-start-column="15" selection-end-line="49" selection-end-column="15" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/project/js/MVS.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="286">
+              <caret line="28" lean-forward="true" selection-start-line="28" selection-end-line="28" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/project/js/test.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="153">
+              <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/project/css/main_CSS.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1428">
+              <caret line="84" column="1" lean-forward="true" selection-start-line="84" selection-start-column="1" selection-end-line="84" selection-end-column="1" />
             </state>
           </provider>
         </entry>
@@ -56,15 +115,18 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="CSS File" />
         <option value="HTML File" />
         <option value="JavaScript File" />
-        <option value="CSS File" />
       </list>
     </option>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
       <find>addListenerForOne</find>
+      <find>beginElement</find>
+      <find>start</find>
+      <find>0.3</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -99,9 +161,14 @@
         <option value="$PROJECT_DIR$/homework_1/site/site_video.html" />
         <option value="$PROJECT_DIR$/homework_1/my.html/learn.html" />
         <option value="$PROJECT_DIR$/project/css/main_CSS.css" />
-        <option value="$PROJECT_DIR$/project/start.html" />
-        <option value="$PROJECT_DIR$/project/game.html" />
         <option value="$PROJECT_DIR$/project/js/game.js" />
+        <option value="$PROJECT_DIR$/project/game.html" />
+        <option value="$PROJECT_DIR$/project/js/test.html" />
+        <option value="$PROJECT_DIR$/project/js/SPA.js" />
+        <option value="$PROJECT_DIR$/project/js/start.js" />
+        <option value="$PROJECT_DIR$/project/js/MVS.js" />
+        <option value="$PROJECT_DIR$/project/start.html" />
+        <option value="$PROJECT_DIR$/project/css/start.css" />
       </list>
     </option>
   </component>
@@ -119,6 +186,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -130,18 +198,6 @@
               <item name="pvt_projects" type="b2602c69:ProjectViewProjectNode" />
               <item name="pvt_projects" type="462c0819:PsiDirectoryNode" />
               <item name="homework_1" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="pvt_projects" type="b2602c69:ProjectViewProjectNode" />
-              <item name="pvt_projects" type="462c0819:PsiDirectoryNode" />
-              <item name="homework_1" type="462c0819:PsiDirectoryNode" />
-              <item name="homework_11" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="pvt_projects" type="b2602c69:ProjectViewProjectNode" />
-              <item name="pvt_projects" type="462c0819:PsiDirectoryNode" />
-              <item name="homework_1" type="462c0819:PsiDirectoryNode" />
-              <item name="site" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="pvt_projects" type="b2602c69:ProjectViewProjectNode" />
@@ -164,7 +220,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -195,29 +250,29 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JavaScript Debug.game.html (1)">
-    <configuration name="1.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/pvt_projects/homework_1/my.html/1.html" useBuiltInWebServerPort="true">
-      <method v="2" />
-    </configuration>
+  <component name="RunManager" selected="JavaScript Debug.start.html">
     <configuration name="game.html (1)" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/pvt_projects/project/game.html" useBuiltInWebServerPort="true">
       <method v="2" />
     </configuration>
     <configuration name="learn.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/pvt_projects/homework_1/my.html/learn.html" useBuiltInWebServerPort="true">
       <method v="2" />
     </configuration>
-    <configuration name="site_video.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/pvt_projects/homework_1/site/site_video.html" useBuiltInWebServerPort="true">
+    <configuration name="start.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/pvt_projects/project/start.html" useBuiltInWebServerPort="true">
       <method v="2" />
     </configuration>
-    <configuration name="start.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/pvt_projects/project/start.html" useBuiltInWebServerPort="true">
+    <configuration name="test.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/pvt_projects/project/js/test.html" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
+    <configuration name="SPA.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="SPA.js" working-dir="$PROJECT_DIR$/project/js">
       <method v="2" />
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JavaScript Debug.game.html (1)" />
         <item itemvalue="JavaScript Debug.start.html" />
+        <item itemvalue="JavaScript Debug.test.html" />
+        <item itemvalue="Node.js.SPA.js" />
+        <item itemvalue="JavaScript Debug.game.html (1)" />
         <item itemvalue="JavaScript Debug.learn.html" />
-        <item itemvalue="JavaScript Debug.site_video.html" />
-        <item itemvalue="JavaScript Debug.1.html" />
       </list>
     </recent_temporary>
   </component>
@@ -273,12 +328,17 @@
       <workItem from="1563294667566" duration="5914000" />
       <workItem from="1563475207735" duration="117000" />
       <workItem from="1563902550807" duration="6276000" />
-      <workItem from="1563986721393" duration="7359000" />
+      <workItem from="1563986721393" duration="7738000" />
+      <workItem from="1564068015398" duration="5376000" />
+      <workItem from="1564081023271" duration="1194000" />
+      <workItem from="1564151968898" duration="2458000" />
+      <workItem from="1564161757159" duration="10561000" />
+      <workItem from="1564219050621" duration="9335000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="218627000" />
+    <option name="totallyTimeSpent" value="247930000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -335,19 +395,6 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/homework_2/.idea/misc.xml" />
-    <entry file="file://$PROJECT_DIR$/homework_2/.idea/homework_2.iml" />
-    <entry file="file://$PROJECT_DIR$/homework_1/my.html/mvc.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="447">
-          <caret line="303" column="7" selection-start-line="303" selection-start-column="7" selection-end-line="303" selection-end-column="7" />
-          <folding>
-            <element signature="e#3046#4083#2" expanded="true" />
-            <element signature="n#style#0;n#p#4;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/homework_1/homework_11/1.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="529">
@@ -603,31 +650,67 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/project/start.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="151">
-          <caret line="33" column="24" selection-start-line="33" selection-start-column="24" selection-end-line="33" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Temp/Rar$DIa452.34441/style.css" />
     <entry file="file://$PROJECT_DIR$/project/css/main_CSS.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="286">
-          <caret line="35" column="1" lean-forward="true" selection-start-line="35" selection-start-column="1" selection-end-line="35" selection-end-column="1" />
+        <state relative-caret-position="1428">
+          <caret line="84" column="1" lean-forward="true" selection-start-line="84" selection-start-column="1" selection-end-line="84" selection-end-column="1" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/project/game.html">
+    <entry file="file://$PROJECT_DIR$/project/js/test.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="269">
-          <caret line="28" column="79" selection-start-line="28" selection-start-column="79" selection-end-line="28" selection-end-column="79" />
+        <state relative-caret-position="153">
+          <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/project/js/game.js">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="181">
+          <caret line="163" column="4" selection-start-line="163" selection-start-column="4" selection-end-line="165" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/project/game.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-343">
+          <caret line="6" column="1" lean-forward="true" selection-start-line="6" selection-start-column="1" selection-end-line="6" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/project/js/start.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="28" selection-start-line="7" selection-start-column="28" selection-end-line="7" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/project/js/SPA.js">
+      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="184">
-          <caret line="28" column="45" selection-start-line="28" selection-start-column="45" selection-end-line="28" selection-end-column="45" />
+          <caret line="49" column="15" lean-forward="true" selection-start-line="49" selection-start-column="15" selection-end-line="49" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/project/js/MVS.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="286">
+          <caret line="28" lean-forward="true" selection-start-line="28" selection-end-line="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/project/start.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="13" selection-start-column="13" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/project/css/start.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="22" column="12" lean-forward="true" selection-start-line="22" selection-start-column="12" selection-end-line="22" selection-end-column="12" />
         </state>
       </provider>
     </entry>

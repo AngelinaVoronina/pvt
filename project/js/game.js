@@ -16,7 +16,7 @@ function Ball(x,y,color,id,cell){
     self.drawBalls=function(){
         let d=document.createElementNS("http://www.w3.org/2000/svg" ,"circle");
         d.setAttributeNS(null,'cx',String(self.x));
-        d.setAttributeNS(null,'cy','31');
+        d.setAttributeNS(null,'cy','0');
         d.setAttributeNS(null,'r',self.r);
         d.setAttributeNS(null,'style','fill: ' + self.color + ';');
         d.setAttributeNS(null,'id',self.id);
@@ -26,37 +26,68 @@ function Ball(x,y,color,id,cell){
 
         let anim=document.createElementNS("http://www.w3.org/2000/svg", "animate");
         anim.setAttributeNS(null,'attributeName',"cy");
-        anim.setAttributeNS(null,"from", "-30");
+        anim.setAttributeNS(null,"from", "0");
         anim.setAttributeNS(null, "to", String(self.y));
-        anim.setAttributeNS(null, "dur", "1s");
-        anim.setAttributeNS(null, "begin", "0s");
-        anim.setAttributeNS(null, "fill", "freeze")
+        anim.setAttributeNS(null, "dur", "0.8s");
+        anim.setAttributeNS(null, "begin", "indefinite");
+        anim.setAttributeNS(null, "fill", "freeze");
+        anim.setAttribute("repeatCount", "1");
+
         d.appendChild(anim);
 
         d.addEventListener("click",function () {
             active=self.id;
-        })
+        });
+        anim.beginElement();
+
     };
 
     self.move=function (side) {
-        b=document.getElementById(self.id);
+        let animateTag;
+        let b=document.getElementById(self.id);
         if (side==="left"){
+            animateTag=b.firstChild;
+            b.setAttributeNS(null, 'cy', self.y);
+            animateTag.setAttributeNS(null,'attributeName',"cx");
+            animateTag.setAttributeNS(null, "from", self.x);
+            animateTag.setAttributeNS(null, "dur", "400ms");
             self.x-=62;
-            console.log(self.x)
+            console.log(self.x);
             b.setAttributeNS(null,'cx',String(self.x));
+            animateTag.setAttributeNS(null, "to", self.x);
+            animateTag.beginElement();
 
         }
         if (side==="right"){
+            animateTag=b.firstChild;
+            b.setAttributeNS(null, 'cy', self.y);
+            animateTag.setAttributeNS(null,'attributeName',"cx");
+            animateTag.setAttributeNS(null, "from", self.x);
+            animateTag.setAttributeNS(null, "dur", "400ms");
             self.x+=62;
             b.setAttributeNS(null,'cx',String(self.x));
+            animateTag.setAttributeNS(null, "to", self.x);
+            animateTag.beginElement();
         }
         if (side==="up"){
+            animateTag=b.firstChild;
+            animateTag.setAttributeNS(null,'attributeName',"cy");
+            animateTag.setAttributeNS(null, "from", self.y);
+            animateTag.setAttributeNS(null, "dur", "400ms");
             self.y-=62;
             b.setAttributeNS(null,'cy',String(self.y));
+            animateTag.setAttributeNS(null, "to", self.y);
+            animateTag.beginElement();
         }
         if (side==="down"){
+            animateTag=b.firstChild;
+            animateTag.setAttributeNS(null,'attributeName',"cy");
+            animateTag.setAttributeNS(null, "from", self.y);
+            animateTag.setAttributeNS(null, "dur", "400ms");
             self.y+=62;
             b.setAttributeNS(null,'cy',String(self.y));
+            animateTag.setAttributeNS(null, "to", self.y);
+            animateTag.beginElement();
         }
     };
     self.getStatus= function () {
@@ -181,6 +212,9 @@ async function pressBall(mainBall){
     if (firstCheck===true){
         mainBall.setStatus(true);
         highlightCell(mainBall.getId());
+        return 0;
+    }
+    if (mainBall===activeBall){
         return 0;
     }
     else{
@@ -363,7 +397,7 @@ function destroy(balls,cells){
     }
 }
 
-function fall() {
+async function fall() {
     //let check=true;// есть пустые- true
 
     while (checkField()===true){
@@ -382,15 +416,21 @@ function fall() {
         for (let i=1; i<8;i++){
             for(let j=0;j<6;j++){
                 if (objCells[i][j].getFill()===false){
-                    objCells[i-1][j].getBall().move("down");
-                    objCells[i-1][j].getBall().setCell(objCells[i][j]);
-                    objCells[i][j].setBall(objCells[i-1][j].getBall());
-                    objCells[i][j].setFill(true);
-                    objCells[i-1][j].setFill(false);
+                        objCells[i-1][j].getBall().move("down");
+                        // await timeout(200);
+                        objCells[i-1][j].getBall().setCell(objCells[i][j]);
+                        objCells[i][j].setBall(objCells[i-1][j].getBall());
+                        objCells[i][j].setFill(true);
+                        objCells[i-1][j].setFill(false);
                 }
+
             }
+             //await timeout(80);
+            // задержка 0.5с тут для плавности вертикали
         }
-    }
+
+
+        }
 }
 
 //фун-я проверяет поле, если есть хотя бы 1 пустая ячейка возвращ. true
