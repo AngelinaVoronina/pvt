@@ -3,7 +3,6 @@ body{
     color: #333;
     line-height: 1.6; /* межстрочный интервал */
 }
-
 *,
 *:before,
 *:after{
@@ -98,8 +97,6 @@ body{
     justify-content: center;
     width: 100%;
     height: 100vh;
-    background: url(../images/02.jpg) center no-repeat fixed;
-    background-size: cover; /* занимало всю пдощать окна */
 }
 
 .container{
