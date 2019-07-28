@@ -1,0 +1,249 @@
+body{
+    margin: 0;
+    color: #333;
+    line-height: 1.6; /* межстрочный интервал */
+}
+
+*,
+*:before,
+*:after{
+    box-sizing: border-box;
+}
+
+.root{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+    margin: 0 auto;
+    background: url(../images/02.jpg)  no-repeat 0 100% fixed;
+    background-size: cover; /* занимало всю пдощать окна */
+}
+
+a{
+    text-decoration: none;
+}
+a, a:visited {
+    color: #333;
+}
+
+/*Header */
+.header{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    position:absolute;
+    top:0;
+    left:0;
+    right: 0;
+    z-index: 1000;
+}
+
+.header_inner{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.logo{
+    font-size: 30px;
+    font-weight: bold;
+    color: white;
+    font-family: "Kaushan Script", cursive;
+}
+
+.inform{
+    position: relative;
+    vertical-align: top;
+    margin: 0 15px;
+    text-decoration: none;
+
+}
+
+.nav{
+    text-transform: uppercase;
+    font-size: 16px;
+}
+.link{
+    font-family: Arial;
+    position: relative;
+    display: inline-block;
+    vertical-align: top;
+    margin: 20px 55px;
+    color: #ffffff;
+    text-decoration: none;
+    transition: color 0.2s linear;
+
+}
+.link:after{
+    content: "";
+    width: 100%;
+    height: 3px;
+    background-color: white;
+    position: absolute;
+    top: 100%;
+    display: none;
+}
+.link:hover{
+    color: wheat;
+}
+.link:hover:after{
+    display: block;
+}
+
+/*Intro */
+
+.intro{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    max-width: 100%;
+    height: 100vh;
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin: 0 auto 40px;
+}
+
+.main_item{
+    width: 50%;
+    margin: 0 auto;
+    padding: 90px 0;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
+
+.left_count{
+    justify-content: center;
+    height: 100%;
+    color: yellow;
+    font-weight: bold;
+    font-size: 20px;
+    padding: 20px;
+}
+
+#mainField{
+    color: #444455;
+    margin: 0 auto;
+}
+
+/*Start page */
+.play{
+    display: flex;
+    justify-content: center;
+    width: 60%;
+}
+#buttons {
+    margin: auto auto auto 0;
+    align-items: center;
+}
+.name{
+    font-size:140px ;
+    color: coral;
+    text-shadow: 4px 3px 0px #000000, 9px 8px 0px rgba(0,0,0,0.15);
+}
+.btn{
+    align-content: center;
+    height:60px;
+    width: 200px;
+    margin: auto;
+    top: 200px;
+    font-size: 25px;
+    font-weight: bold;
+    text-align: center;
+    border: 1px solid rgb(250,172,17);
+    border-radius: 7px;
+    background: rgb(255,212,3) linear-gradient(rgb(255,212,3), rgb(248,157,23));
+}
+.btn:hover{
+    box-shadow: inset 0 -1px 1px rgba(0,0,0,0), inset 0 1px 2px rgba(0,0,0,0), inset 0 0 0 60px rgba(255,255,0,.5);
+}
+.btn:active{
+    border-color: rgba(177,159,0,1);
+    box-shadow: inset 0 -1px 1px rgba(0,0,0,.1), inset 0 1px 2px rgba(0,0,0,.3), inset 0 0 0 60px rgba(255,255,0,.45);
+}
+li {
+    list-style-type: none; /* Убираем маркеры */
+}
+
+@keyframes nabor-teksta {
+    from { width: 0 }
+    to { width: 100% }
+}
+
+.name{
+    animation: nabor-teksta 4s;
+    overflow: hidden;
+    text-align: center;
+    white-space: nowrap;
+}
+
+@media screen and (max-width: 800px) {
+    .intro{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        max-width: 800px;
+        height: 100vh;
+    }
+
+    .container {
+        display: block;
+        width: 100%;
+        margin: 0 auto;
+    }
+    .play {
+        display: flex;
+        justify-content: center;
+        height: 50%;
+        width: 100%;
+    }
+
+    .name{
+        font-size:90px ;
+        color: coral;
+        text-shadow: 4px 3px 0px #000000, 9px 8px 0px rgba(0,0,0,0.15);
+    }
+    #buttons {
+        margin: auto auto auto 0;
+        align-items: center;
+    }
+}
+
+/*Rules page */
+.intro_Rules{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    max-width: 100%;
+    height: 100vh;
+}
+.container_Rules {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    height: 100%;
+    width: 100%;
+}
+.header_Rules{
+    width: 100%;
+    text-align: center;
+    font-weight: bold;
+    font-family: "Kaushan Script", cursive;
+    color: wheat;
+}
+.text{
+    width: 100%;
+    color: white;
+    font-size: 20px;
+    text-align: center;
+}

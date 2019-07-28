@@ -68,10 +68,9 @@ Router.prototype = {
             xhttp.onreadystatechange = function () {
                 if (this.readyState === 4 && this.status === 200) {
                     scope.rootElem.innerHTML = this.responseText;
-                    replaceCssFile('css/' + htmlName.slice(0, -5) + '.css')
+                   // replaceCssFile('css/' + htmlName.slice(0, -5) + '.css')
                     if (htmlName==='game.html'){
                         startGame();
-                        replacejscssfile('css/start.css', 'css/game.css', 'css');
                     }
                 }
             };
