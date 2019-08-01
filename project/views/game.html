@@ -5,17 +5,36 @@
                 <a href="#start"><div id="main" class="link">Главная</div></a>
             </nav>
             <div class="logo">InLine</div>
+            <div class="left_count"><p>Score:<font color="white" id="score"> 0</font></p></div>
+           <!-- <div id="timer"></div>-->
             <div class="inform">User Name</div>
         </div>
     </div>
 </header>
+
 <div class="container">
-    <div class="main_item">
-        <div class="left_count">0</div>
-        <div id="mainField">
-            <svg xmlns="http://www.w3.org/2000/svg" width="374" height="498">
-                <rect id="areaP"  x="0" y="0" width="374" height="498" fill="#555566" stroke="white" stroke-width="5" ></rect>
-            </svg>
-        </div>
-    </div>
+         <div class="main_item">
+             <div class="btn_start">
+                 <ul>
+                     <li><div id="b_start" class="btn">Начать игру</div></a></li>
+                 </ul>
+             </div>
+
+             <div class="count">
+                <div id="mainField" class="svg-container">
+                    <svg xmlns="http://www.w3.org/2000/svg" version="1.2" viewBox="0 0 374 498" preserveAspectRatio="xMinYMin meet" class="svg-content">
+                        <rect id="areaP"  x="0" y="0" width="374" height="498" fill="#555566" stroke="white" stroke-width="5" ></rect>
+                     </svg>
+
+                </div>
+            </div>
+
+             <div class="timer">
+                 <div id="visual-timer"></div>
+                 <div id="timer-wrapper">
+                     <div id="time">1:00</div>
+                 </div>
+             </div>
+
+         </div>
 </div>

@@ -70,7 +70,8 @@ Router.prototype = {
                     scope.rootElem.innerHTML = this.responseText;
                    // replaceCssFile('css/' + htmlName.slice(0, -5) + '.css')
                     if (htmlName==='game.html'){
-                        startGame();
+                        //startGame();
+                        addListnerToBtn();
                     }
                 }
             };

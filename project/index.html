@@ -9,19 +9,23 @@
     <title>Game</title>
 </head>
 <body>
+<iframe src="./sounds/silence.mp3" allow="autoplay" id="audio" style="display:none"></iframe>
+
+<audio autoplay loop width="0px">
+    <source src="./sounds/fon.mp3"  type="audio/mp3">
+    Тег audio не поддерживается вашим браузером. <a href="./sounds/fon.mp3" >Скачайте музыку</a>.
+</audio>
 <div class="root">
-    <video autoplay loop width="0px">
-        <source src="./sounds/fon.mp3"  type="audio/mp3">
-        Тег audio не поддерживается вашим браузером. <a href="./sounds/game.mp3" >Скачайте музыку</a>.
-    </video>
-<div class="intro">
+
+
+    <div class="intro">
     <div class="container">
         <div class="play">
             <p class="name"> InLine </p>
         </div>
         <div id="buttons">
             <ul>
-                <li><a href="#game"><div id="1" class="btn">Начать игру</div></a></li><br>
+                <li><a href="#game"><div id="1" class="btn">Новая игра</div></a></li><br>
                 <li><div id="2" class="btn">Рекорды</div></li><br>
                 <li><a href="#rules"><div id="3" class="btn">Правила игры</div></a></li>
             </ul>

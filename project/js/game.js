@@ -1,9 +1,36 @@
+let objBalls = [];
+let objCells = [[], [], [], [], [], [], [], []];
+let sec=5;
+let min=0;
+let oneMin = 60 * 1;
+
+function clearSVG() {
+    let svg=document.getElementsByTagName('svg')[0];
+    while (svg.lastChild) {
+        svg.removeChild(svg.lastChild);
+    }
+    let d = document.createElementNS("http://www.w3.org/2000/svg", "rect");
+    d.setAttributeNS(null, 'x', '0');
+    d.setAttributeNS(null, 'y', '0');
+    d.setAttributeNS(null, 'width', '374');
+    d.setAttributeNS(null, 'height', '498');
+    d.setAttributeNS(null, 'style', 'fill: #555566; stroke: white; stroke-width: 5;');
+    d.setAttributeNS(null, 'id', 'areaP');
+    svg.appendChild(d);
+}
+
 function startGame() {
-    let objBalls = [];
-    let objCells = [[], [], [], [], [], [], [], []];
+    sec=5;
+    min=0;
+    oneMin= 60 * 1;
+    clearSVG();
+
     let active;
     let colors = ["blue", "red", "purple", "yellow", "green"];
     let ballId = 100;
+    let score=0;
+    let r=document.getElementById("score");
+    r.innerText=0;
 
     function Ball(x, y, color, id, cell) {
         let self = this;
@@ -366,11 +393,14 @@ function startGame() {
         for (let i = 0; i < balls.length; i++) {
             d = document.getElementById(balls[i].getId());
             d.remove();
+            score+=10;
             cleanStorage(balls[i]);
         }
         for (let i = 0; i < cells.length; i++) {
             cells[i].setFill(false);
         }
+        let r=document.getElementById("score");
+        r.innerText=score;
     }
 
     async function fall() {
@@ -481,5 +511,66 @@ function startGame() {
         startDestroy();
         addListeners();
     }
+
+
     pageLoad();
+}
+
+
+
+function finish() {
+    console.log("1");
+    objCells=[[], [], [], [], [], [], [], []];
+    objBalls=[];
+}
+
+function startTimer(duration) {
+    let display = document.querySelector('#time');
+    let minTimer = duration, minutes, seconds;
+
+    let inter = setInterval(function () {
+        let visualTimer = document.getElementById('visual-timer');
+        visualTimer.classList.add("height-change");
+
+        minutes = parseInt(minTimer / 60);
+        seconds = parseInt(minTimer % 60);
+
+        seconds = seconds < 10 ? "0" + seconds : seconds;
+
+        display.textContent = minutes + ":" + seconds;
+
+        if (--minTimer < 0) {
+            clearInterval(inter);
+            finish();
+            document.getElementById("b_start").style.display = 'block';
+        }
+
+    }, 1000);
+}
+
+function refresh()
+{
+    sec--;
+    if(sec==-1){sec=59; min=min-1;}
+    else{min=min;}
+    if(sec<=9){sec="0" + sec;}
+    time=(min<=9 ? "0"+min : min) + ":" + sec;
+    if(document.getElementById){timer.innerHTML=time;}
+    inter=setTimeout("refresh()", 1000);
+    if(min==0 && sec==0){
+        sec="00";
+        clearInterval(inter);
+        finish();
+        document.getElementById("b_start").style.display = 'block';
+    }
+}
+
+function addListnerToBtn() {
+    let button = document.getElementById("b_start");
+    button.addEventListener("click", function () {
+        startGame();
+        //refresh();
+        startTimer(oneMin);
+        document.getElementById("b_start").style.display = 'none';
+    }, false)
 }
