@@ -1,16 +1,15 @@
-<script src="http://fe.it-academy.by/JQ/jquery.js"></script>
-<script>
-
 "use strict";
 
 var ajaxHandlerScript="https://fe.it-academy.by/AjaxStringStorage2.php";
 var updatePassword;
 var stringName='Score';
+var leader;
 
 function storeInfo() {
+    updatePassword=Math.random();
     $.ajax( {
             url : ajaxHandlerScript, type : 'POST', cache : false, dataType:'json',
-            data : { f : 'LOCKGET', n : stringName},
+            data : { f : 'LOCKGET', n : stringName, p : updatePassword },
             success : lockGetReady, error : errorHandler
         }
     );
@@ -23,11 +22,11 @@ function lockGetReady(callresult) {
         // нам всё равно, что было прочитано -
         // всё равно перезаписываем
         var info={
-            score : document.getElementById('score').value;
+            score : document.getElementById('score').innerHTML
         };
         $.ajax( {
                 url : ajaxHandlerScript, type : 'POST', cache : false, dataType:'json',
-                data : { f : 'UPDATE', n : stringName, v : JSON.stringify(info)},
+                data : { f : 'UPDATE', n : stringName, v : JSON.stringify(info), p : updatePassword },
                 success : updateReady, error : errorHandler
             }
         );
@@ -54,14 +53,10 @@ function readReady(callresult) {
         alert(callresult.error);
     else if ( callresult.result!="" ) {
         var info=JSON.parse(callresult.result);
-        document.getElementById('scores_result').value=info;
+        document.getElementById('scores_result').innerHTML=info.score;
     }
 }
 
 function errorHandler(jqXHR,statusStr,errorStr) {
     alert(statusStr+' '+errorStr);
 }
-
-restoreInfo();
-
-</script>

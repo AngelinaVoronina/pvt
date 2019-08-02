@@ -516,8 +516,6 @@ function startGame() {
     pageLoad();
 }
 
-
-
 function finish() {
     objCells=[[], [], [], [], [], [], [], []];
     objBalls=[];
@@ -529,9 +527,6 @@ function startTimer(duration) {
     let minTimer = duration, minutes, seconds;
 
     let inter = setInterval(function () {
-        let visualTimer = document.getElementById('visual-timer');
-        visualTimer.classList.add("height-change");
-
         minutes = parseInt(minTimer / 60);
         seconds = parseInt(minTimer % 60);
 
@@ -548,29 +543,26 @@ function startTimer(duration) {
     }, 1000);
 }
 
-function refresh()
-{
-    sec--;
-    if(sec==-1){sec=59; min=min-1;}
-    else{min=min;}
-    if(sec<=9){sec="0" + sec;}
-    time=(min<=9 ? "0"+min : min) + ":" + sec;
-    if(document.getElementById){timer.innerHTML=time;}
-    inter=setTimeout("refresh()", 1000);
-    if(min==0 && sec==0){
-        sec="00";
-        clearInterval(inter);
-        finish();
-        document.getElementById("b_start").style.display = 'block';
-    }
-}
 
 function addListnerToBtn() {
     let button = document.getElementById("b_start");
     button.addEventListener("click", function () {
         startGame();
-        //refresh();
         startTimer(oneMin);
+        drawTimer();
         document.getElementById("b_start").style.display = 'none';
     }, false)
+}
+
+function drawTimer() {
+    let b=document.getElementById("timeStart");
+    let anim = document.createElementNS("http://www.w3.org/2000/svg", "animate");
+    anim.setAttributeNS(null, 'attributeName', "height");
+    anim.setAttributeNS(null, "from", "498");
+    anim.setAttributeNS(null, "to", "0");
+    anim.setAttributeNS(null, "dur", "60s");
+    anim.setAttributeNS(null, "begin", "indefinite");
+    anim.setAttributeNS(null, "fill", "freeze");
+    b.appendChild(anim);
+    anim.beginElement();
 }
