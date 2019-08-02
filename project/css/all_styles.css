@@ -322,9 +322,11 @@ li {
     }
 
     .container {
-        display: block;
-        width: 100%;
+        display: flex;
+        flex-direction: column;
         margin: 0 auto;
+        height: 100%;
+        width: 100%;
     }
 
     .play {
@@ -343,12 +345,12 @@ li {
     #buttons {
         margin: auto auto auto 0;
         align-items: center;
+        justify-content: center;
     }
 
     .header{
         height: 10%;
         padding: 10px;
-        justify-content: space-between;
     }
     .header_inner{
         height: 40%;
@@ -356,7 +358,6 @@ li {
 
     .main_item{
         display: flex;
-        flex-direction: column;
         max-width: 800px;
         padding: 60px 0px;
     }
@@ -385,23 +386,15 @@ li {
 
     .logo{
         font-size: 18px;
-        margin: 0px 15px;
     }
-
     .nav{
-        font-size: 14px;
-
-    }
-
-    .inform{
-        line-height: 1;
         font-size: 14px;
     }
 
     .count{
         display: flex;
         justify-content: center;
-        width: 90%;
+        width: 65%;
     }
     #mainField{
         color: #444455;
@@ -436,7 +429,6 @@ li {
     }
 
     #timer-wrapper{
-        top:15%;
-        left: 65%;
+        top:13%;
     }
 }
