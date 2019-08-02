@@ -519,9 +519,9 @@ function startGame() {
 
 
 function finish() {
-    console.log("1");
     objCells=[[], [], [], [], [], [], [], []];
     objBalls=[];
+    storeInfo();
 }
 
 function startTimer(duration) {

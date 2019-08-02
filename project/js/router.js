@@ -72,6 +72,10 @@ Router.prototype = {
                     if (htmlName==='game.html'){
                         //startGame();
                         addListnerToBtn();
+                    };
+                    if (htmlName==='records.html'){
+                        //startGame();
+                        restoreInfo();
                     }
                 }
             };
@@ -80,5 +84,3 @@ Router.prototype = {
         })(this);
     }
 };
-
-
