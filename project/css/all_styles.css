@@ -33,9 +33,9 @@ a, a:visited {
     display: flex;
     justify-content: space-between;
     width: 100%;
-    height: 10%;
+    height: 20%;
     position:absolute;
-    top:10px;
+    top:0;
     left:0;
     right: 0;
     z-index: 1000;
@@ -110,14 +110,12 @@ a, a:visited {
 
 .container{
     display: flex;
-    justify-content: center;
     width: 100%;
     margin: 0 auto 40px;
 }
 
 .main_item{
     width: 100%;
-    height: 100vh;
     padding: 90px 0;
     display: flex;
     justify-content: left;
@@ -266,8 +264,6 @@ li {
     animation-duration: 60s;
     animation-direction: normal;
     animation-timing-function: linear;
-    animation-fill-mode: backwards;
-    animation-iteration-count: infinite;
 }
 
 @keyframes heightChange {
@@ -322,11 +318,9 @@ li {
     }
 
     .container {
-        display: flex;
-        flex-direction: column;
-        margin: 0 auto;
-        height: 100%;
+        display: block;
         width: 100%;
+        margin: 0 auto;
     }
 
     .play {
@@ -337,7 +331,6 @@ li {
     }
 
     .name{
-        height: 50%;
         font-size:90px ;
         color: coral;
         text-shadow: 4px 3px 0px #000000, 9px 8px 0px rgba(0,0,0,0.15);
@@ -345,19 +338,16 @@ li {
     #buttons {
         margin: auto auto auto 0;
         align-items: center;
-        justify-content: center;
     }
 
     .header{
         height: 10%;
-        padding: 10px;
     }
     .header_inner{
         height: 40%;
     }
 
     .main_item{
-        display: flex;
         max-width: 800px;
         padding: 60px 0px;
     }
@@ -372,7 +362,7 @@ li {
 
     #b_start{
         align-items: center;
-        width: 90px;
+        width: 130px;
         height: 45px;
         font-size: 20px;
         line-height: 1;
@@ -401,6 +391,15 @@ li {
         margin: 0 40px;
         justify-content: center;
 
+    }
+    .intro{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        max-width: 800px;
+        height: 100vh;
     }
 
     .svg-container{
